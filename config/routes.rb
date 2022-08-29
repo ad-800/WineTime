@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   resources :wines, only: %i[index show]
 
+  resources :quizzes, only: %i[new create]
 end
