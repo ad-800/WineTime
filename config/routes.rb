@@ -9,5 +9,4 @@ Rails.application.routes.draw do
 
   resources :wines, only: %i[index show]
 
-  sadda
 end
