@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :collections
 
   resources :wines, only: %i[index show]
+
+  sadda
 end
