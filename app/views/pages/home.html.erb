@@ -1,4 +1,20 @@
 <h1>WineTime</h1>
 <p>It's time...</p>
 <%= link_to 'Start Questionnaire', new_quiz_path, :class => "btn btn-warning" %>
-<%= link_to 'Sign In', user_session_path, :class => "btn btn-primary" %>
+<div class="home-description-cards d-grid gap-3">
+  <div class="home-description">
+    <h3>Find Your Preferences</h2>
+    <%= image_tag "52.svg", alt: "rss feed", size: "120x120", class: "home-doodle-1" %>
+    <p>Take a short questionnaire to a get a curated selection of wines.</p>
+  </div>
+  <div class="home-description">
+    <h3>View Custom Matches</h2>
+    <%= image_tag "5.svg", alt: "rss feed", size: "120x120", class: "home-doodle-2" %>
+    <p>Discover new wines, group old favorites, organize your virtual wine cooler.</p>
+  </div>
+    <div class="home-description">
+    <h3>Share Your Profile</h2>
+    <%= image_tag "55.svg", alt: "rss feed", size: "100x100", class: "home-doodle-3" %>
+    <p>Share recommendations and see what your friends are drinking.</p>
+  </div>
+</div>
