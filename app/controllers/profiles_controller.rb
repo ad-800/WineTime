@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   before_action :set_user, only: :show
 
   def show
+    @collections = Collection.all
   end
 
   private
