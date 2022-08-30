@@ -9,5 +9,6 @@ class QuizzesController < ApplicationController
     @answers = params[:quizz].values
     # if visitor signs in (clicks log in)
       # @answers is saved
+    redirect_to new_user_registration_path(@answers)
   end
 end

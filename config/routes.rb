@@ -11,5 +11,7 @@ Rails.application.routes.draw do
 
   resources :quizzes, only: %i[new create]
 
+  get "quizzes/result", to: "quizzes#result"
+
   resources :profiles
 end
