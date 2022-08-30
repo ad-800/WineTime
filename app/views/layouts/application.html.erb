@@ -11,10 +11,15 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-    <%= render "shared/flashes" %>
-    <div class="container-fluid text-center mt-4 p-2">
-      <%= yield %>
+    <div class="page-container">
+      <%= render "shared/navbar" %>
+      <main id="main-content">
+        <%= render "shared/flashes" %>
+        <div class="container-fluid text-center mt-4 p-2">
+          <%= yield %>
+        </div>
+      </main>
+      <%# render "shared/footer" %>
     </div>
   </body>
 </html>
