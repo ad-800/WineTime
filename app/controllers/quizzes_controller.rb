@@ -5,8 +5,9 @@ class QuizzesController < ApplicationController
   end
 
   def create
-    current_user.update(answers: params[:quizz].values)
-
-    redirect_to root_path
+    # current_user.update(answers: params[:quizz].values)
+    @answers = params[:quizz].values
+    # if visitor signs in (clicks log in)
+      # @answers is saved
   end
 end
