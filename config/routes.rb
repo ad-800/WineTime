@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   get "quizzes/result", to: "quizzes#result"
 
   resources :profiles
+
+  resources :users do
+    resources :collections, only: %i[new create]
+  end
 end
