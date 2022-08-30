@@ -1,1 +1,34 @@
 // Specific CSS for your home-page
+.home-description-cards {
+  margin: 2rem
+}
+
+.home-description {
+  border: 1px solid $black;
+  padding: 2rem;
+  position: relative;
+}
+
+.home-description > p {
+  margin: 0;
+}
+
+.home-doodle-1 {
+  position: absolute;
+  left: -24px;
+  top: -31px;
+  transform: rotate(-10deg);
+}
+
+.home-doodle-2 {
+  position: absolute;
+  right: -27px;
+  top: -40px;
+  transform: rotate(80deg);
+}
+
+.home-doodle-3 {
+  position: absolute;
+  left: -40px;
+  top: -28px;
+}
