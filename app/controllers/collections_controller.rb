@@ -1,5 +1,6 @@
 class CollectionsController < ApplicationController
   before_action :set_collection, only: %i[show create edit update destroy]
+  before_action :set_user, only: :show
 
   def index
     @collections = Collection.all
@@ -14,8 +15,9 @@ class CollectionsController < ApplicationController
 
   def create
     @collection = Collection.new(collection_params)
+    @collection.user_id = current_user.id
     if collection.save
-      redirect_to collection_path(@collection)
+      redirect_to profiles_path(@user)
     else
       render :new, status: :unprocessable_entity
     end
@@ -37,10 +39,14 @@ class CollectionsController < ApplicationController
   private
 
   def collection_params
-    params.require(:product).permit(:title)
+    params.require(:product).permit(:title, :user_id)
   end
 
   def set_collection
     @collection = Collection.find(params[:id])
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 end
