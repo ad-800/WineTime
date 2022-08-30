@@ -13,5 +13,7 @@ Rails.application.routes.draw do
 
   get "quizzes/result", to: "quizzes#result"
 
-  resources :profiles
+  get "profiles/user", to: "profiles#show"
+
+  # resources :profiles
 end
