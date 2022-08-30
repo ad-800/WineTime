@@ -31,6 +31,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_171112) do
     t.index ["user_id"], name: "index_collections_on_user_id"
   end
 
+  create_table "user_profiles", force: :cascade do |t|
+    t.string "username"
+    t.text "bio"
+    t.string "answers", default: [], array: true
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_profiles_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -39,9 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_171112) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "username"
-    t.text "bio"
-    t.string "answers", default: [], array: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -62,4 +69,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_171112) do
   add_foreign_key "collection_wines", "collections"
   add_foreign_key "collection_wines", "wines"
   add_foreign_key "collections", "users"
+  add_foreign_key "user_profiles", "users"
 end

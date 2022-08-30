@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.2"
 
 # New gems specifically for WineTime
+gem "dotenv-rails", groups: [:development, :test]
+gem "cloudinary"
 
 # 1. Better Errors https://github.com/BetterErrors/better_errors
 group :development do
