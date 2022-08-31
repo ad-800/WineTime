@@ -39,7 +39,7 @@ class CollectionsController < ApplicationController
   private
 
   def collection_params
-    params.require(:product).permit(:title, :user_id)
+    params.require(:collection).permit(:title, :user_id)
   end
 
   def set_collection
