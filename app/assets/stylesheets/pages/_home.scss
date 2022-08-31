@@ -15,20 +15,21 @@
 
 .home-doodle-1 {
   position: absolute;
-  left: -24px;
-  top: -31px;
+  left: -32px;
+  top: -24px;
   transform: rotate(-10deg);
+  z-index: 1;
 }
 
 .home-doodle-2 {
   position: absolute;
-  right: -27px;
-  top: -40px;
-  transform: rotate(80deg);
+  right: -46px;
+  top: -31px;
+  z-index: 1;
 }
 
 .home-doodle-3 {
   position: absolute;
-  left: -40px;
-  top: -28px;
+  left: -55px;
+  bottom: 0px;
 }
