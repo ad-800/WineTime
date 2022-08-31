@@ -6,7 +6,8 @@ class CollectionsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @collection = Collection.find(params[:id])
+    @wines = @collection.wines
   end
 
   def new
