@@ -4,8 +4,6 @@ class ProfilesController < ApplicationController
   def me
     @collections = Collection.where(user: current_user)
     recommend_wine
-    set_first_user_collection
-    # set_collection_wine
     # rendering the page to specific page
     render :show
   end
@@ -20,19 +18,6 @@ class ProfilesController < ApplicationController
     @wines = Wine.all
     @recommend_one = Wine.order('RANDOM()').first
     @recommend_two = Wine.order('RANDOM()').last
-  end
-
-  def set_first_user_collection
-    @first_user_collection = Collection.find(current_user.id)
-  end
-
-  def set_collection_wine
-    @collection_wine = CollectionWine.find(@first_user_collection.id)
-    if collection_wine == nil
-      @collection_wine_size = " ZERO "
-    else
-      @collection_wine_size = @collection_wine.wine_id.count.to_s
-    end
   end
 
   private
