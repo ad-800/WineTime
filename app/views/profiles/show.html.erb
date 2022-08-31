@@ -9,5 +9,10 @@
     </div>
   <% end %>
 
-  <%= link_to "Create a new Wine List", new_collection_path %>
+<%= link_to "Create a new Wine List", new_collection_path %>
+
+<div>
+  <h3>Recommendations</h3>
+  <%= @recommend_one.name %> <br>
+  <%= @recommend_two.name %>
 </div>
