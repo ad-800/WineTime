@@ -9,11 +9,22 @@ Rails.application.routes.draw do
 
   resources :wines, only: %i[index show]
 
-  resources :quizzes, only: %i[new create]
+  resources :quizzes, only: %i[new create] do
+    collection do
+      get :result
+    end
+  end
 
-  get "quizzes/result", to: "quizzes#result"
+  resources :profiles do
+    # /profiles/*
+    collection do
+      get :me
+    end
 
-  resources :profiles
+    # /profiles/:id/*
+    # member do
+    # end
+  end
 
   resources :users do
     resources :collections, only: %i[new create]

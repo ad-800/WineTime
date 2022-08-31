@@ -1,12 +1,13 @@
-<h1>Show</h1>
+<div class="container">
+  <h1>Show</h1>
 
-<h3>User Wine Lists</h3>
-<ul>
-  <% @collections.each do |list| %>
-    <% if @user == list.user %>
-      <%= list.id %> <%= list.title %>
-    <% end %>
+  <h3>User Wine Lists</h3>
+
+  <% @collections.each do |collection| %>
+    <div>
+      <%= collection.title %>
+    </div>
   <% end %>
-</ul>
 
-<%= link_to "Create a new Wine List", new_collection_path %>
+  <%= link_to "Create a new Wine List", new_collection_path %>
+</div>
