@@ -194,6 +194,8 @@ new_wine.save
 
 #10
 
+puts "Creating João's 10 seeds"
+
 parameters = {
   name: 'Friuli Colli Orientali Merlot DOC 2017 - Dri Roncat',
   description: 'Enjoy it with main dishes featuring red meat, Meat or mushroom-based pasta or rice dishes.',
@@ -213,3 +215,105 @@ new_wine.photo.attach(io: file, filename: "friuli.png", content_type: "png")
 new_wine.save
 
 puts "Finished planting"
+
+# Joao 1
+
+parameters = {
+  name: 'Douro Tinto "Duas Quintas" 2019 - Casa Ramos Pinto',
+  description: 'Excellent with meat or mushroom-based main dishes, meat or mushroom-based pasta or rice dishes.',
+  price: 30.40,
+  rating: 91,
+  country: 'Portugal',
+  region: 'Douro',
+  color: 'Red',
+  wine_type: 'Dinner with friends.'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1661963868/xxikfhdryelv405acrjn.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "quintas.png", content_type: "png")
+new_wine.save
+
+# Joao 2
+
+parameters = {
+  name: '"Encruzado e Arinto" Branco 2020 - Quinta de Serradinha',
+  description: 'Enjoy it with crustaceans, fish-based main dishes, middle Eastern dishes.',
+  price: 34.64,
+  rating: 80,
+  country: 'Portugal',
+  region: 'Douro',
+  color: 'White',
+  wine_type: 'Dinner with friends.'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1661964447/brtgs9vm7c0pbkytxgzx.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "ecruzado.png", content_type: "png")
+new_wine.save
+
+# Joao 3
+
+parameters = {
+  name: 'Kamptal Grüner Veltliner 1 ÖTW DAC "Schenkenbichl" 2016 - Weingut Weszeli',
+  description: 'Excellent with fish-based main dishes, main dishes featuring white meats.',
+  price: 40.41,
+  rating: 91,
+  country: 'Austria',
+  region: 'Kamptal',
+  color: 'White',
+  wine_type: 'Treating yourself to something special.'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1661965063/oeclizbfjq8unshoyrsg.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "ecruzado.png", content_type: "png")
+new_wine.save
+
+# Joao 4
+
+parameters = {
+  name: 'Valdobbiadene Prosecco Superiore Brut "Cuvée del Fondatore" 2020 - Valdo',
+  description: 'Enjoy it fish-based appetizers, meat or mushroom-based appetizers.',
+  price: 24.17,
+  rating: 92,
+  country: 'Italy',
+  region: 'Valdobbiadene',
+  color: 'White',
+  wine_type: 'Special occasions.'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1661965565/abvg1zzwp7ej28opo8hx.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "fonda.png", content_type: "png")
+new_wine.save
+
+# Joao 5
+
+parameters = {
+  name: 'Jumilla Garnacha DO "Enemigo Mio" 2021 - Casa Rojo',
+  description: 'Perfect for main dishes featuring red meat, meat-based pasta or rice dishes.',
+  price: 25.43,
+  rating: 88,
+  country: 'Spain',
+  region: 'Jumilla',
+  color: 'Red',
+  wine_type: 'Dinner with friends.'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1661965940/kwnpiy82dldjh1l0hghk.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "enemigo.png", content_type: "png")
+new_wine.save
+
+puts "Finished planting Joao's seeds"
