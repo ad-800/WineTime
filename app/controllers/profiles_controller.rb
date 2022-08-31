@@ -5,6 +5,7 @@ class ProfilesController < ApplicationController
     @collections = Collection.where(user: current_user)
 
     # rendering the page to specific page
+    recommend_wine
     render :show
   end
 

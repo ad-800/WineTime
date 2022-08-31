@@ -4,14 +4,10 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia neque gravida eros facilisis, id imperdiet turpis porttitor. Aliquam fringilla pellentesque accumsan. Nam facilisis, velit non hendrerit ultricies, ligula tortor ultricies ex, quis varius odio ligula porttitor lacus. Donec cursus dui et quam tempus rhoncus. Nullam tempor scelerisque sem, eget fringilla odio rutrum id. Phasellus lectus ex, facilisis quis lectus ac, ornare fermentum diam. Morbi risus ante, maximus quis vestibulum in, sollicitudin et diam.
 </p>
 
+<%= render 'shared/recommendations' %>
 
 <% if !user_signed_in? %>
-  <h3>Like what you see?</h3>
-  <p>Sign up and see more recomendations!</p>
+  <h3 class='mt-5'>Like what you see?</h3>
+  <p class='mb-5'>Sign up and see more recomendations!</p>
   <%= render 'shared/signup', answers: @answers %>
 <% end %>
-
-<h2>Wines</h2>
-<p>Mauris tincidunt</p>
-<p>Sed mauris augue</p>
-<p>Curabitur ligula nunc</p>

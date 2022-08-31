@@ -1,12 +1,12 @@
 class CollectionsController < ApplicationController
   before_action :set_collection, only: %i[show edit update destroy]
+  before_action :set_user, only: :show
 
   def index
     @collections = Collection.all
   end
 
   def show
-    @user = User.find(params[:id])
   end
 
   def new
@@ -16,9 +16,8 @@ class CollectionsController < ApplicationController
   def create
     @collection = Collection.new(collection_params)
     @collection.user = current_user
-
-    if @collection.save
-      redirect_to me_profiles_path
+    if collection.save
+      redirect_to profiles_path(current_user)
     else
       render :new, status: :unprocessable_entity
     end
@@ -45,5 +44,9 @@ class CollectionsController < ApplicationController
 
   def set_collection
     @collection = Collection.find(params[:id])
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 end
