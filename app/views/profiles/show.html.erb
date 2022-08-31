@@ -13,17 +13,10 @@
 
 <div>
   <h3>Recommendations</h3>
-  <%= render 'shared/recommendations' %>
-</div>
+  <%#= cl_image_tag @recommend_one.photo.key %> <br>
+  <%#= @recommend_one.name %> <br>
+  <%#= cl_image_tag @recommend_two.photo.key %> <br>
+  <%#= @recommend_two.name %> <br>
 
-<div>
-  <h3>Your List</h3>
-  <% if @first_user_collection == nil %>
-    <%= link_to "Create your first personal Wine List", new_collection_path %>
-  <% else %>
-    <%= @first_user_collection.title %>
-      Contains
-      <%= @first_user_collection.wine_ids.size %>
-      Wines
-  <% end %>
+  <%= render 'shared/recommendations' %>
 </div>
