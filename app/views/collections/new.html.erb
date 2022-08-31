@@ -1,4 +1,6 @@
-<%= simple_form_for(@collection) do |f| %>
-  <%= f.input :title %>
-  <%= f.button :submit %>
-<% end %>
+<div>
+  <h1>Create a collection</h1>
+  <div class="container form-box mt-4 mb-4 p-3">
+    <%= render "form", collection: @collection %>
+  </div>
+</div>

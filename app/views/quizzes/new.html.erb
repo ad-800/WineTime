@@ -1,9 +1,11 @@
 <h1>Quiz</h1>
 
-<%= simple_form_for :quizz, url: quizzes_path do |f| %>
-<%= f.input :q1, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
-<%= f.input :q2, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
-<%= f.input :q3, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
-<%= f.input :q4, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
-<%= f.submit %>
-<% end %>
+<div class="container form-box mt-4 mb-4 p-3">
+  <%= simple_form_for :quizz, url: quizzes_path do |f| %>
+  <%= f.input :q1, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
+  <%= f.input :q2, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
+  <%= f.input :q3, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
+  <%= f.input :q4, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
+  <%= f.submit %>
+  <% end %>
+</div>

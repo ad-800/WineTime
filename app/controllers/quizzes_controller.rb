@@ -10,6 +10,6 @@ class QuizzesController < ApplicationController
 
   def create
     session[:answers] = params[:quizz].values
-    redirect_to quizzes_result_path
+    redirect_to result_quizzes_path
   end
 end
