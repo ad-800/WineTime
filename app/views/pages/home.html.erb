@@ -1,20 +1,22 @@
-<h1>WineTime</h1>
-<p>It's time...</p>
-<%= link_to 'Start Questionnaire', new_quiz_path, :class => "btn btn-warning" %>
-<div class="home-description-cards d-grid gap-3">
-  <div class="home-description">
-    <h3>Find Your Preferences</h2>
-    <%= image_tag "dalle-wine-girl.png", alt: "rss feed", size: "120x120", class: "home-doodle-1" %>
-    <p>Take a short questionnaire to a get a curated selection of wines.</p>
-  </div>
-  <div class="home-description">
-    <h3>View Custom Matches</h2>
-    <%= image_tag "dalle-wine-girl-facing-left.png", alt: "rss feed", size: "140x140", class: "home-doodle-2" %>
-    <p>Discover new wines, group old favorites, organize your virtual wine cooler.</p>
-  </div>
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <h1>WineTime</h1>
+  <p>It's time...</p>
+  <%= link_to 'Start Questionnaire', new_quiz_path, :class => "btn btn-warning mb-4" %>
+  <div class="home-description-cards d-grid gap-3">
     <div class="home-description">
-    <h3>Share Your Profile</h2>
-    <%= image_tag "dalle-girl-scream", alt: "rss feed", size: "100x100", class: "home-doodle-3" %>
-    <p>Share recommendations and see what your friends are drinking.</p>
+      <h3>Find Your Preferences</h2>
+      <%= image_tag "dalle-wine-girl.png", alt: "rss feed", size: "120x120", class: "home-doodle-1" %>
+      <p>Take a short questionnaire to a get a curated selection of wines.</p>
+    </div>
+    <div class="home-description">
+      <h3>View Custom Matches</h2>
+      <%= image_tag "dalle-wine-girl-facing-left.png", alt: "rss feed", size: "140x140", class: "home-doodle-2" %>
+      <p>Discover new wines, group old favorites, organize your virtual wine cooler.</p>
+    </div>
+      <div class="home-description">
+      <h3>Share Your Profile</h2>
+      <%= image_tag "dalle-girl-scream", alt: "rss feed", size: "100x100", class: "home-doodle-3" %>
+      <p>Share recommendations and see what your friends are drinking.</p>
+    </div>
   </div>
 </div>
