@@ -13,6 +13,10 @@
 
 <div>
   <h3>Recommendations</h3>
-  <%= @recommend_one.name %> <br>
-  <%= @recommend_two.name %>
+  <%#= cl_image_tag @recommend_one.photo.key %> <br>
+  <%#= @recommend_one.name %> <br>
+  <%#= cl_image_tag @recommend_two.photo.key %> <br>
+  <%#= @recommend_two.name %> <br>
+
+  <%= render 'shared/recommendations' %>
 </div>
