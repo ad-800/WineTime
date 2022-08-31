@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
 
   def me
     @collections = Collection.where(user: current_user)
-
+    recommend_wine
     # rendering the page to specific page
     render :show
   end
