@@ -1,8 +1,12 @@
 <div class="container">
   <h1>Results</h1>
+  <%= image_tag "28.svg", class: 'scribble-sm' %>
+
+  <h2>The Connoisseur</h2>
 
   <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia neque gravida eros facilisis, id imperdiet turpis porttitor. Aliquam fringilla pellentesque accumsan. Nam facilisis, velit non hendrerit ultricies, ligula tortor ultricies ex, quis varius odio ligula porttitor lacus. Donec cursus dui et quam tempus rhoncus. Nullam tempor scelerisque sem, eget fringilla odio rutrum id. Phasellus lectus ex, facilisis quis lectus ac, ornare fermentum diam. Morbi risus ante, maximus quis vestibulum in, sollicitudin et diam.
+  You have quite a delicate palette. You have specific preferences that are mostly on the expensive side, such as raw seafood and lobster. Your high standards can make you a bit delicate for others to manage, and if ever you are put in a situation that isn't in your favor, you might leave a bad taste in people's mouths. But this quality is still necessary for helping other people explore finer tastes, and your adherence to quality is something that will always be admirable for those who are yet to discover more of the world.
+
   </p>
 
   <%= render 'shared/recommendations' %>
@@ -13,7 +17,8 @@
 
   <% if !user_signed_in? %>
     <h3 class='mt-5'>Like what you see?</h3>
-    <p class='mb-5'>Sign up and see many more recomendations!</p>
+    <p>Sign up and see many more recomendations!</p>
+     <%= image_tag "30.svg", class: 'scribble-md' %>
     <%= render 'shared/signup', answers: @answers %>
   <% end %>
 
