@@ -1,0 +1,36 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3><%= wine.name %></h3>
+        <%= cl_image_tag wine.photo.key %>
+        <br><br>
+        <p>Description: <%= wine.description %></p>
+        <p>Rating: <%= wine.rating %></p>
+        <p>Country: <%= wine.country %></p>
+        <p>Region: <%= wine.region %></p>
+        <p>Color: <%= wine.color %></p>
+        <p>Occasion: <%= wine.wine_type %></p>
+        <p>Price: €<%= wine.price %></p>
+      </div>
+      <div class="modal-footer; text-align: center; margin-bottom">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Add to Collection
+          </button>
+          <ul class="dropdown-menu">
+            <% @collections.each do |collection| %>
+              <li>
+                <%= simple_form_for :collection, url: add_wine_collection_path(collection) do |f| %>
+                  <%= f.input :wine, as: :hidden, input_html: { value: wine.id } %>
+                  <%= f.submit collection.title, class: "dropdown-item" %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,16 +1,10 @@
 <div class="container">
-  <h1>Show</h1>
-
-  <h3>User Wine Lists</h3>
-
+  <h1>Your Wines</h1>
   <% @collections.each do |collection| %>
-    <div>
-      <p><%= link_to collection.title, user_collection_path(id: collection.id, user_id: current_user) %></p>
-    </div>
+    <div><p><%= link_to collection.title, user_collection_path(id: collection.id, user_id: current_user) %></p></div>
   <% end %>
+  <%= link_to "Create a new Wine List", new_collection_path %>
 </div>
-
-<%= link_to "Create a new Wine List", new_collection_path %>
 
 <div>
   <h3>Recommendations</h3>
@@ -28,7 +22,7 @@
   <% end %>
 
   <% if @first_user_collection.wine_ids.size > 0 %>
-    <%= render 'shared/carousel' %>
+    <%#= render 'shared/carousel' %>
     <%# raise %>
 
   <% else %>
