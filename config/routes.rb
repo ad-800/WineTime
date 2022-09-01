@@ -30,6 +30,10 @@ Rails.application.routes.draw do
   end
 
   resources :collections, only: %i[new create] do
-    resources :bottle, only: %i[new create destroy]
+    member do
+      post :add_wine
+    end
   end
+
+  resources :collection_wines, only: %i[destroy]
 end
