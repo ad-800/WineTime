@@ -10,23 +10,3 @@
   <h3>Recommendations</h3>
   <%= render 'shared/recommendations', collections: @collections %>
 </div>
-
-<div>
-  <% if @first_user_collection == nil %>
-    <%= link_to "Create your first personal Wine List", new_collection_path %>
-  <% else %>
-    <h3> Your <%= @first_user_collection.title %>
-      Wine list contains
-      <%= @first_user_collection.wine_ids.size %>
-      wines. </h3>
-  <% end %>
-
-  <% if @first_user_collection.wine_ids.size > 0 %>
-    <%#= render 'shared/carousel' %>
-    <%# raise %>
-
-  <% else %>
-    <h3> Nothing to show, add some wines to your list! </h3>
-  <% end %>
-
-</div>
