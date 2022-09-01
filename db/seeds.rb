@@ -8,6 +8,7 @@
 require "open-uri"
 
 puts "Cleaning database..."
+CollectionWine.destroy_all
 Wine.destroy_all
 
 puts "Creating 10 seeds"
