@@ -1,0 +1,96 @@
+<div class="content">
+            <!-- The content which is placed at the center of the carousel -->
+            <div class="slideshow">
+                <!-- carousel control buttons -->
+                <button class="slide-btn slide-btn-1"></button>
+                <button class="slide-btn slide-btn-2"></button>
+                <button class="slide-btn slide-btn-3"></button>
+                <button class="slide-btn slide-btn-4"></button>
+                <!-- carousel wrapper which contains all images -->
+                <div class="slideshow-wrapper">
+                    <div class="slide">
+                      <%= f.input :you_wake_up_in_the_morning_and_you_drink, as: :radio_buttons, collection: ['coffee with sugar', 'coffee and no sugar', 'tea', 'milk', 'nothing'] %>
+                    </div>
+                    <div class="slide">
+                      <%= f.input :fruits_you_like, as: :radio_buttons, collection: ['citrus only', 'refreshing fruit', 'wild berries', 'bleahhh'] %>
+                    </div>
+                    <div class="slide">
+                      <%= f.input :you_put_salt, as: :radio_buttons, collection: ['on everything!', 'not at all', 'a bit'] %>
+                    </div>
+                    <div class="slide">
+                      <%= f.input :my_friends_call_me, as: :radio_buttons, collection: ['Adventureous', 'Traditional', 'Naughty'] %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+<div class="container">
+  <h1>Quiz</h1>
+
+  <%= simple_form_for :quizz, url: quizzes_path do |f| %>
+  <div class="container form-box mt-4 mb-4 p-3 text-left">
+    <%= f.input :you_wake_up_in_the_morning_and_you_drink, as: :radio_buttons, collection: ['coffee with sugar', 'coffee and no sugar', 'tea', 'milk', 'nothing'] %>
+  </div>
+  <div class="container form-box mt-4 mb-4 p-3 text-left">
+    <%= f.input :fruits_you_like, as: :radio_buttons, collection: ['citrus only', 'refreshing fruit', 'wild berries', 'bleahhh'] %>
+  </div>
+  <div class="container form-box mt-4 mb-4 p-3 text-left">
+    <%= f.input :you_put_salt, as: :radio_buttons, collection: ['on everything!', 'not at all', 'a bit'] %>
+  </div>
+  <div class="container form-box mt-4 mb-4 p-3 text-left">
+    <%= f.input :my_friends_call_me, as: :radio_buttons, collection: ['Adventureous', 'Traditional', 'Naughty'] %>
+  </div>
+  <div class="container form-box mt-4 mb-4 p-3 text-left">
+    <%= f.input :pasta_or_pizza_topping, as: :radio_buttons, collection: ['hotttt spicyyyyy', 'truffle or mushrooms', 'vegetables', 'cheesy'] %>
+  </div>
+  <div class="container form-box mt-4 mb-4 p-3 text-left">
+    <%= f.input :you_like_to_drink_at, as: :radio_buttons, collection: ['aperitivo', 'special event', 'dinner with friends', 'all the time, doesnt really matter'] %>
+  </div>
+
+  <%= f.submit %>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= f.input :you_wake_up_in_the_morning_and_you_drink, as: :radio_buttons, collection: ['coffee with sugar', 'coffee and no sugar', 'tea', 'milk', 'nothing'] %>
+    </div>
+    <div class="carousel-item">
+      <%= f.input :fruits_you_like, as: :radio_buttons, collection: ['citrus only', 'refreshing fruit', 'wild berries', 'bleahhh'] %>
+    </div>
+    <div class="carousel-item">
+      <%= f.input :you_put_salt, as: :radio_buttons, collection: ['on everything!', 'not at all', 'a bit'] %>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

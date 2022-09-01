@@ -1,11 +1,52 @@
-<h1>Quiz</h1>
-
-<div class="container form-box mt-4 mb-4 p-3">
+<div class="container">
+  <%= image_tag "quizz.png", class:'img-quizz' %>
+  <h1>Take the quizz</h1>
+  <h3>Find out what's your wine drinker porfile</h3>
+  <%= image_tag "32.svg", class: 'scribble-quizz' %>
   <%= simple_form_for :quizz, url: quizzes_path do |f| %>
-  <%= f.input :q1, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
-  <%= f.input :q2, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
-  <%= f.input :q3, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
-  <%= f.input :q4, as: :radio_buttons, collection: ['a', 'b', 'c'] %>
+  <div class="container form-box mt-4 mb-4 p-3 car">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+      <div class="carousel-inner content">
+        <div class="carousel-item active">
+          <%= f.input :you_wake_up_in_the_morning_and_you_drink, as: :radio_buttons, collection: ['coffee with sugar', 'coffee and no sugar', 'tea', 'milk', 'nothing'] %>
+        </div>
+        <div class="carousel-item">
+          <%= f.input :fruits_you_like, as: :radio_buttons, collection: ['citrus only', 'refreshing fruit', 'wild berries', 'bleahhh'] %>
+        </div>
+        <div class="carousel-item">
+          <%= f.input :you_put_salt, as: :radio_buttons, collection: ['on everything!', 'not at all', 'a bit'] %>
+        </div>
+        <div class="carousel-item">
+          <%= f.input :my_friends_call_me, as: :radio_buttons, collection: ['Adventureous', 'Traditional', 'Naughty'] %>
+        </div>
+        <div class="carousel-item">
+          <%= f.input :pasta_or_pizza_topping, as: :radio_buttons, collection: ['hotttt spicyyyyy', 'truffle or mushrooms', 'vegetables', 'cheesy'] %>
+        </div>
+        <div class="carousel-item">
+          <%= f.input :you_like_to_drink_at, as: :radio_buttons, collection: ['aperitivo', 'special event', 'dinner with friends', 'all the time, doesnt really matter'] %>
+        </div>
+      </div>
+      <br>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
   <%= f.submit %>
   <% end %>
 </div>
