@@ -5,7 +5,7 @@
           <% @wines.each do |wine| %>
             <div class="search-card mb-4">
               <h4><%= wine.name %></h4>
-              <p><%= cl_image_tag wine.photo.key %></p>
+              <p><%= cl_image_tag wine.photo.key, class: 'responsive' %></p>
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Show
               </button>
@@ -14,7 +14,7 @@
                     <div class="modal-content">
                       <div class="modal-body">
                         <h3><%= wine.name %></h3>
-                        <%= cl_image_tag wine.photo.key %>
+                        <%= cl_image_tag wine.photo.key, class:'responsive' %>
                         <br><br>
                         <p>Description: <%= wine.description %></p>
                         <p>Rating: <%= wine.rating %></p>
