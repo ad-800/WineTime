@@ -1,7 +1,10 @@
 <div class="container">
   <h1>Your Wines</h1>
   <% @collections.each do |collection| %>
-    <div><p><%= link_to collection.title, user_collection_path(id: collection.id, user_id: current_user) %></p></div>
+    <div>
+    <%= link_to collection.title, user_collection_path(id: collection.id, user_id: current_user) %>
+    <%= button_to "X", collection_path(id: collection.id), method: :delete %>
+    </div>
   <% end %>
   <%= link_to "Create a new Wine List", new_collection_path %>
 </div>
