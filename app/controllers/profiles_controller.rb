@@ -16,8 +16,7 @@ class ProfilesController < ApplicationController
   def recommend_wine
     # for now the recommended wines are randomly chosen
     @wines = Wine.all
-    @recommend_one = Wine.order('RANDOM()').first
-    @recommend_two = Wine.order('RANDOM()').last
+    @recommended = Wine.order('RANDOM()').sample(3)
   end
 
   private
