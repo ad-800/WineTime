@@ -35,9 +35,9 @@
             </ul>
           </div>
         <% else %>
-          <button class="btn btn-secondary" type="button" disabled>
-            Add to Collection
-          </button>
+          <div class="btn btn-secondary">
+            <%= link_to "Add to Collection", new_collection_path(:wine => wine.id), :class => "btn" %>
+          </div>
         <% end %>
       </div>
     </div>
