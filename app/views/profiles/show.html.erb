@@ -29,13 +29,12 @@
       wines. </h3>
   <% end %>
 
-  <% if @collections.first.wine_ids.size == nil %>
+  <% if @collections.first == nil || @collections.first.size == 0 %>
 
     <h3> Nothing to show, add some wines to your list! </h3>
 
-    <%# raise %>
+  <% else @collections.first.wine_ids.size > 0 %>
 
-  <% elsif @collections.first.wine_ids.size > 0 %>
     <%= render 'shared/carousel' %>
 
   <% end %>
