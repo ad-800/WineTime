@@ -17,22 +17,27 @@
   <%= render 'shared/recommendations', collections: @collections %>
 </div>
 
+<%# raise %>
+
 <div>
-  <% if @first_user_collection == nil %>
+  <% if @collections.size == 0 %>
     <%= link_to "Create your first personal Wine List", new_collection_path %>
   <% else %>
-    <h3> Your <%= @first_user_collection.title %>
+    <h3> Your <%= @collections.first.title %>
       Wine list contains
-      <%= @first_user_collection.wine_ids.size %>
+      <%= @collections.first.wine_ids.size %>
       wines. </h3>
   <% end %>
 
-  <% if @first_user_collection.wine_ids.size > 0 %>
-    <%= render 'shared/carousel' %>
+  <% if @collections.first.wine_ids.size == nil %>
+
+    <h3> Nothing to show, add some wines to your list! </h3>
+
     <%# raise %>
 
-  <% else %>
-    <h3> Nothing to show, add some wines to your list! </h3>
+  <% elsif @collections.first.wine_ids.size > 0 %>
+    <%= render 'shared/carousel' %>
+
   <% end %>
 
 </div>
