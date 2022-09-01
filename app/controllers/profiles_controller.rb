@@ -4,7 +4,6 @@ class ProfilesController < ApplicationController
   def me
     @collections = Collection.where(user: current_user)
     recommend_wine
-    set_first_user_collection
     # rendering the page to specific page
     render :show
   end
@@ -18,10 +17,6 @@ class ProfilesController < ApplicationController
     # for now the recommended wines are randomly chosen
     @wines = Wine.all
     @recommended = Wine.order('RANDOM()').sample(3)
-  end
-
-  def set_first_user_collection
-    @first_user_collection = @collections.first
   end
 
   private
