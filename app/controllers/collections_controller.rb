@@ -12,6 +12,7 @@ class CollectionsController < ApplicationController
 
   def new
     @collection = Collection.new
+    @bottle = params[:wine]
   end
 
   def create
@@ -19,10 +20,16 @@ class CollectionsController < ApplicationController
     @collection.user = current_user
 
     if @collection.save
+      add_wine_to_collection
       redirect_to me_profiles_path
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def add_wine_to_collection
+    @bottle = CollectionWine.new(collection_id: @collection.id, wine_id: params[:bottle])
+    @bottle.save
   end
 
   def edit
