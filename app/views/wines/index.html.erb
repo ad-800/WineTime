@@ -2,9 +2,35 @@
   <div class="row justify-content-center">
     <div class="col-sm-8">
       <div id="movies">
-        <% @wines.each do |wine| %>
-          <h4><%= wine.name %></h4>
-          <p><%= cl_image_tag wine.photo.key %></p>
+          <% @wines.each do |wine| %>
+            <div class="search-card mb-4">
+              <h4><%= wine.name %></h4>
+              <p><%= cl_image_tag wine.photo.key %></p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Show
+              </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <h3><%= wine.name %></h3>
+                        <%= cl_image_tag wine.photo.key %>
+                        <br><br>
+                        <p>Description: <%= wine.description %></p>
+                        <p>Rating: <%= wine.rating %></p>
+                        <p>Country: <%= wine.country %></p>
+                        <p>Region: <%= wine.region %></p>
+                        <p>Color: <%= wine.color %></p>
+                        <p>Occasion: <%= wine.wine_type %></p>
+                        <p>Price: <%= wine.price %>€</p>
+                      </div>
+                      <div class="modal-footer; text-align: center; margin-bottom">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
         <% end %>
       </div>
     </div>
