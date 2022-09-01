@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-sm-8">
+    <div class="col-xs-12">
       <div id="movies">
           <% @wines.each do |wine| %>
             <div class="search-card mb-4">
               <h4><%= wine.name %></h4>
-              <p><%= cl_image_tag wine.photo.key %></p>
+              <p><%= cl_image_tag wine.photo.key, class: 'responsive' %></p>
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Show
               </button>
@@ -14,7 +14,7 @@
                     <div class="modal-content">
                       <div class="modal-body">
                         <h3><%= wine.name %></h3>
-                        <%= cl_image_tag wine.photo.key %>
+                        <%= cl_image_tag wine.photo.key, class:'responsive' %>
                         <br><br>
                         <p>Description: <%= wine.description %></p>
                         <p>Rating: <%= wine.rating %></p>
@@ -39,7 +39,7 @@
 
 <% if @search == nil %>
   <div class="container mb-3">
-    <%= image_tag 'search_again.png' %>
+    <%= image_tag 'search_again.png', class: 'search-img' %>
     <h3 class='mt-5'>The wine you're searching is currently not on our list.</h3>
   </div>
 <% end %>
