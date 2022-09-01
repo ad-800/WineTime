@@ -21,9 +21,11 @@
         <%= cl_image_tag @recommend_one.photo.key %>
       </div>
 
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption">
+        <div class="d-none d-md-block">
           <h1><%= @recommend_one.name %></h1>
           <p>Some representative placeholder content for the first slide.</p>
+        </div>
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Show
           </button>
@@ -32,8 +34,17 @@
                 <div class="modal-content">
                   <div class="modal-body">
                     <h3><%= @recommend_one.name %></h3>
+                    <%= cl_image_tag @recommend_one.photo.key %>
+                    <br><br>
+                    <p>Description: <%= @recommend_one.description %></p>
+                    <p>Rating: <%= @recommend_one.rating %></p>
+                    <p>Country: <%= @recommend_one.country %></p>
+                    <p>Region: <%= @recommend_one.region %></p>
+                    <p>Color: <%= @recommend_one.color %></p>
+                    <p>Occasion: <%= @recommend_one.wine_type %></p>
+                    <p>Price: <%= @recommend_one.price %>€</p>
                   </div>
-                  <div class="modal-footer; text-align: center;">
+                  <div class="modal-footer; text-align: center; margin-bottom">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                   </div>
                 </div>
