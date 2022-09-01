@@ -15,7 +15,6 @@ class CollectionsController < ApplicationController
   end
 
   def create
-    raise
     @collection = Collection.new(collection_params)
     @collection.user = current_user
 
@@ -37,6 +36,12 @@ class CollectionsController < ApplicationController
   def destroy
     @collection.destroy
     redirect_to collections_path, status: :see_others
+  end
+
+  def add_wine
+    @bottle = CollectionWine.new(collection_id: params[:id], wine_id: params[:collection][:wine])
+    @bottle.save
+    redirect_to me_profiles_path(current_user)
   end
 
   private
