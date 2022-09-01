@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div id="movies">
+        <% @wines.each do |wine| %>
+          <h4><%= wine.name %></h4>
+          <p><%= cl_image_tag wine.photo.key %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% if @search == nil %>
+  <div class="container mb-3">
+    <%= image_tag 'search_again.png' %>
+    <h3 class='mt-5'>The wine you're searching is currently not on our list.</h3>
+  </div>
+<% end %>
