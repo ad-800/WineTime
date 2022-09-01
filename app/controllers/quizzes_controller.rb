@@ -7,6 +7,7 @@ class QuizzesController < ApplicationController
   def result
     @answers = session[:answers]
     recommend_wine
+    personality
   end
 
   def create
@@ -19,5 +20,10 @@ class QuizzesController < ApplicationController
     @wines = Wine.all
     @recommend_one = Wine.order('RANDOM()').first
     @recommend_two = Wine.order('RANDOM()').last
+  end
+
+  def personality
+    @personalities = Personality.all
+    @personality = Personality.order('RANDOM()').first
   end
 end

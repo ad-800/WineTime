@@ -10,8 +10,9 @@ require "open-uri"
 puts "Cleaning database..."
 CollectionWine.destroy_all
 Wine.destroy_all
+Personality.destroy_all
 
-puts "Creating 10 seeds"
+puts "Creating 10 wines"
 
 #1
 
@@ -23,7 +24,12 @@ parameters = {
   country: 'Italy',
   region: 'Apulia',
   color: 'Rose',
-  wine_type: 'Appetizer, Informal occasions.'
+  wine_type: 'Appetizer, Informal occasions.',
+  bitter: 2,
+  fruit: 8,
+  mineral: 2,
+  spice: 7,
+  earth: 7
 }
 
 puts parameters[:name]
@@ -43,7 +49,12 @@ parameters = {
   country: 'Portugal',
   region: 'Douro',
   color: 'White',
-  wine_type: 'Informal occasions.'
+  wine_type: 'Informal occasions.',
+  bitter: 1,
+  fruit: 8,
+  mineral: 5,
+  spice: 2,
+  earth: 0
 }
 
 puts parameters[:name]
@@ -63,7 +74,12 @@ parameters = {
   country: 'Germany',
   region: 'Baden',
   color: 'White',
-  wine_type: 'Informal occasions.'
+  wine_type: 'Informal occasions.',
+  bitter: 4,
+  fruit: 5,
+  mineral: 9,
+  spice: 0,
+  earth: 2
 }
 
 puts parameters[:name]
@@ -83,7 +99,12 @@ parameters = {
   country: 'France',
   region: 'Bordeaux',
   color: 'Red',
-  wine_type: 'Informal occasions.'
+  wine_type: 'Informal occasions.',
+  bitter: 1,
+  fruit: 8,
+  mineral: 1,
+  spice: 8,
+  earth: 5
 }
 
 puts parameters[:name]
@@ -103,7 +124,12 @@ parameters = {
   country: 'France',
   region: 'Champagne',
   color: 'Champagne and Sparkling',
-  wine_type: 'Appetizer.'
+  wine_type: 'Appetizer.',
+  bitter: 0,
+  fruit: 2,
+  mineral: 8,
+  spice: 3,
+  earth: 3
 }
 
 puts parameters[:name]
@@ -123,7 +149,12 @@ parameters = {
   country: 'Italy',
   region: 'Veneto',
   color: 'Red',
-  wine_type: 'Dinner with friends.'
+  wine_type: 'Dinner with friends.',
+  bitter: 2,
+  fruit: 8,
+  mineral: 1,
+  spice: 6,
+  earth: 7
 }
 
 puts parameters[:name]
@@ -143,7 +174,12 @@ parameters = {
   country: 'Chile',
   region: 'Casablanca Valley',
   color: 'Red',
-  wine_type: 'Dinner with friends.'
+  wine_type: 'Dinner with friends.',
+  bitter: 0,
+  fruit: 9,
+  mineral: 3,
+  spice: 7,
+  earth: 4
 }
 
 puts parameters[:name]
@@ -163,7 +199,12 @@ parameters = {
   country: 'Portugal',
   region: 'Douro',
   color: 'White',
-  wine_type: 'Light lunches.'
+  wine_type: 'Light lunches.',
+  bitter: 0,
+  fruit: 8,
+  mineral: 3,
+  spice: 7,
+  earth: 4
 }
 
 puts parameters[:name]
@@ -183,7 +224,12 @@ parameters = {
   country: 'USA',
   region: 'California',
   color: 'Red',
-  wine_type: 'Dinner with friends.'
+  wine_type: 'Dinner with friends.',
+  bitter: 5,
+  fruit: 3,
+  mineral: 5,
+  spice: 8,
+  earth: 8
 }
 
 puts parameters[:name]
@@ -205,7 +251,12 @@ parameters = {
   country: 'Italy',
   region: 'Friuli',
   color: 'Red',
-  wine_type: 'Informal occasions.'
+  wine_type: 'Informal occasions.',
+  bitter: 7,
+  fruit: 2,
+  mineral: 2,
+  spice: 9,
+  earth: 9
 }
 
 puts parameters[:name]
@@ -227,7 +278,12 @@ parameters = {
   country: 'Portugal',
   region: 'Douro',
   color: 'Red',
-  wine_type: 'Dinner with friends.'
+  wine_type: 'Dinner with friends.',
+  bitter: 3,
+  fruit: 3,
+  mineral: 3,
+  spice: 6,
+  earth: 10
 }
 
 puts parameters[:name]
@@ -247,7 +303,12 @@ parameters = {
   country: 'Portugal',
   region: 'Douro',
   color: 'White',
-  wine_type: 'Dinner with friends.'
+  wine_type: 'Dinner with friends.',
+  bitter: 4,
+  fruit: 7,
+  mineral: 8,
+  spice: 0,
+  earth: 0
 }
 
 puts parameters[:name]
@@ -267,7 +328,12 @@ parameters = {
   country: 'Austria',
   region: 'Kamptal',
   color: 'White',
-  wine_type: 'Treating yourself to something special.'
+  wine_type: 'Treating yourself to something special.',
+  bitter: 5,
+  fruit: 3,
+  mineral: 5,
+  spice: 5,
+  earth: 1
 }
 
 puts parameters[:name]
@@ -287,7 +353,12 @@ parameters = {
   country: 'Italy',
   region: 'Valdobbiadene',
   color: 'White',
-  wine_type: 'Special occasions.'
+  wine_type: 'Special occasions.',
+  bitter: 0,
+  fruit: 6,
+  mineral: 7,
+  spice: 4,
+  earth: 0
 }
 
 puts parameters[:name]
@@ -307,7 +378,12 @@ parameters = {
   country: 'Spain',
   region: 'Jumilla',
   color: 'Red',
-  wine_type: 'Dinner with friends.'
+  wine_type: 'Dinner with friends.',
+  bitter: 2,
+  fruit: 8,
+  mineral: 5,
+  spice: 9,
+  earth: 5
 }
 
 puts parameters[:name]
@@ -318,3 +394,106 @@ new_wine.photo.attach(io: file, filename: "enemigo.png", content_type: "png")
 new_wine.save
 
 puts "Finished planting Joao's seeds"
+
+puts "Creating Personalities"
+
+#1
+
+parameters = {
+  personality_type: 1,
+  description: 'People welcome you to be a part of their circle, but would rather interact with you in a group setting than with you alone. But you don\'t need to be worried about this condition as people consider you to be a great authority in what you do. This makes up for you being a great listener and people turn to you for advice. Nonetheless, there are still people who would love to know more about you, and even if they are a few, they are the ones that you will cherish and will definitely be for keeps.',
+  flavor_profile: 'The Stoic',
+  wines: [1,2,3]
+}
+
+puts parameters[:flavor_profile]
+
+new_personality = Personality.new(parameters)
+new_personality.save
+
+
+#2
+
+parameters = {
+  personality_type: 2,
+  description: 'You might not be the kind that can push through projects to the end, and your crisp sense of direction allows others to know how to begin their first move. People need someone who will help them kick start their career or life decisions, and you are the person that they find the motivation to start. It doesn\'t matter if a plan was finished successfully or not, but your ability to mobilize when uncertainty is present is an asset that not everyone has. So do not worry if, in the long run, they start to forget you or leave you behind when they started their journey. You helped them start their journey, and they will forever be grateful to you for doing just that.',
+  flavor_profile: 'The Kickstarter',
+  wines: [4,5,6]
+}
+
+puts parameters[:flavor_profile]
+
+new_personality = Personality.new(parameters)
+new_personality.save
+
+#3
+
+parameters = {
+  personality_type: 3,
+  description: 'You have quite a delicate palette. You have specific preferences that are mostly on the expensive side, such as raw seafood and lobster. Your high standards can make you a bit delicate for others to manage, and if ever you are put in a situation that isn\'t in your favor, you might leave a bad taste in people\'s mouths. But this quality is still necessary for helping other people explore finer tastes, and your adherence to quality is something that will always be admirable for those who are yet to discover more of the world.',
+  flavor_profile: 'The Connoisseur',
+  wines: [1,5,7]
+}
+
+puts parameters[:flavor_profile]
+
+new_personality = Personality.new(parameters)
+new_personality.save
+
+#4
+
+parameters = {
+  personality_type: 4,
+  description: 'Mediators can easily make connections with anyone. Their approachable demeanor and welcoming presence allow for wide acceptance with little to no disapproval. Due to their friendliness, some people tend to distance themselves while maintaining their relationships, as they equate your wide network as having no space for an "inner circle", which most mediators think otherwise.',
+  flavor_profile: 'The Mediator',
+  wines: [5,1,2]
+}
+
+puts parameters[:flavor_profile]
+
+new_personality = Personality.new(parameters)
+new_personality.save
+
+#5
+
+parameters = {
+  personality_type: 5,
+  description: 'Romanntics are very invested in their ideals and devoted to their passions. They see their pursuit as cut above the rest, and is a cause for concern for others and some a cause for distress. But for the number of times they have been scorned at, the chances of seeing their passion succeed or encountering people with the same sentiments is a joy that is peace amidst the chaos.',
+  flavor_profile: 'The Romantic',
+  wines: [3,9,2]
+}
+
+puts parameters[:flavor_profile]
+
+new_personality = Personality.new(parameters)
+new_personality.save
+
+#6
+
+parameters = {
+  personality_type: 6,
+  description: 'Conservators are great at keeping with the status quo. They are keen to keep the tradition alive and well while still allowing some room for innovation. This is due to their commitment to their community. They thrive in their roots and will always make sure that you have something to come back to after going out in the world. WIthout conservators (and Malbecs, too) in a person\'s life, there might no be a place where they can call home.',
+  flavor_profile: 'The Conservator',
+  wines: [2,4,6]
+}
+
+puts parameters[:flavor_profile]
+
+new_personality = Personality.new(parameters)
+new_personality.save
+
+#7
+
+parameters = {
+  personality_type: 7,
+  description: 'Adventurers are able to adjust themselves in whatever environment they have and still make a lasting impact. People would love to spend time with adventurers to hear their stories and crazy encounters. They can easily be part of any social group, but it is not in their nature to remain in one place. They are here to explore new tastes and experiences, and their time with you is another entry in their journal. As sad as it may seem, the time spent with adventurers are actually enough to have meaningful moments that both can cherish.',
+  flavor_profile: 'The Adventurer',
+  wines: [5,9,6]
+}
+
+puts parameters[:flavor_profile]
+
+new_personality = Personality.new(parameters)
+new_personality.save
+
+puts "Personalities Created"
