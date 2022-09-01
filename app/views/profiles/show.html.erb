@@ -27,5 +27,12 @@
       wines. </h3>
   <% end %>
 
-  <%= render 'shared/carousel' %>
+  <% if @first_user_collection.wine_ids.size > 0 %>
+    <%= render 'shared/carousel' %>
+    <%# raise %>
+
+  <% else %>
+    <h3> Nothing to show, add some wines to your list! </h3>
+  <% end %>
+
 </div>
