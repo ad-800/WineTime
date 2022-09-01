@@ -22,7 +22,7 @@ class ProfilesController < ApplicationController
   end
 
   def set_first_user_collection
-    @first_user_collection = Collection.find(current_user.id)
+    @first_user_collection = @collections.first
   end
 
   private
