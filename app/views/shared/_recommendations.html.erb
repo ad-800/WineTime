@@ -12,7 +12,7 @@
       </button>
       <ul class="dropdown-menu">
         <% collections.each do |collection| %>
-          <li><%= button_to collection.title, collection_bottle_index_path(collection_id: collection), class: "dropdown-item" %></li>
+          <li><%= button_to collection.title, collection_bottle_index_path(collection_id: collection), class: "dropdown-item", method: "post", action: :create %></li>
         <% end %>
       </ul>
     </div>

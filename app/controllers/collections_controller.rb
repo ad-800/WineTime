@@ -15,6 +15,7 @@ class CollectionsController < ApplicationController
   end
 
   def create
+    raise
     @collection = Collection.new(collection_params)
     @collection.user = current_user
 
