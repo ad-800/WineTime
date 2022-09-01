@@ -1,38 +1,15 @@
 <div class="container">
-  <h1>Show</h1>
-
-  <h3>User Wine Lists</h3>
-
+  <h1>Your Wines</h1>
   <% @collections.each do |collection| %>
     <div>
-      <p><%= link_to collection.title, user_collection_path(id: collection.id, user_id: current_user) %></p>
+    <%= link_to collection.title, user_collection_path(id: collection.id, user_id: current_user) %>
+    <%= button_to "X", collection_path(id: collection.id), method: :delete %>
     </div>
   <% end %>
+  <%= link_to "Create a new Wine List", new_collection_path %>
 </div>
-
-<%= link_to "Create a new Wine List", new_collection_path %>
 
 <div>
   <h3>Recommendations</h3>
   <%= render 'shared/recommendations', collections: @collections %>
-</div>
-
-<div>
-  <% if @first_user_collection == nil %>
-    <%= link_to "Create your first personal Wine List", new_collection_path %>
-  <% else %>
-    <h3> Your <%= @first_user_collection.title %>
-      Wine list contains
-      <%= @first_user_collection.wine_ids.size %>
-      wines. </h3>
-  <% end %>
-
-  <% if @first_user_collection.wine_ids.size > 0 %>
-    <%= render 'shared/carousel' %>
-    <%# raise %>
-
-  <% else %>
-    <h3> Nothing to show, add some wines to your list! </h3>
-  <% end %>
-
 </div>

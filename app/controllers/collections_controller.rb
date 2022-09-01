@@ -34,8 +34,9 @@ class CollectionsController < ApplicationController
   end
 
   def destroy
+    @collection.wines.destroy_all
     @collection.destroy
-    redirect_to collections_path, status: :see_others
+    redirect_to me_profiles_path
   end
 
   def add_wine
