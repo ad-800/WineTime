@@ -1,0 +1,43 @@
+.list {
+  display: flex;
+  border: 1px solid $black;
+  border-radius: 15px;
+  padding: 7px;
+  align-items: center;
+}
+
+.my-collection {
+  display: flex;
+  justify-content: center;
+}
+
+.list > a {
+  text-decoration: none;
+  color: $black;
+}
+
+.list > button {
+  padding: 0;
+  border: none;
+}
+
+.wine-title-info {
+  color: black;
+}
+
+.carousel-caption {
+  text-shadow: 1px 1px white;
+}
+
+.modal-body {
+  margin: 2rem 5rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-body > p > span {
+  font-weight: bolder;
+}
