@@ -6,6 +6,16 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Add to Collection
+      </button>
+      <ul class="dropdown-menu">
+        <% collections.each do |collection| %>
+          <li><%= button_to collection.title, collection_bottle_index_path(collection_id: collection), class: "dropdown-item", method: "post", action: :create %></li>
+        <% end %>
+      </ul>
+    </div>
 
       <div class="d-block w-100">
         <%= cl_image_tag @recommend_one.photo.key %>

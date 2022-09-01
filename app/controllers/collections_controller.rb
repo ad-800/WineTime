@@ -6,7 +6,8 @@ class CollectionsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @collection = Collection.find(params[:id])
+    @wines = @collection.wines
   end
 
   def new
@@ -14,6 +15,7 @@ class CollectionsController < ApplicationController
   end
 
   def create
+    raise
     @collection = Collection.new(collection_params)
     @collection.user = current_user
 
