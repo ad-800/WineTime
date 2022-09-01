@@ -4,7 +4,7 @@
   <h3>Find out what's your wine drinker porfile</h3>
   <%= image_tag "32.svg", class: 'scribble-quizz' %>
   <%= simple_form_for :quizz, url: quizzes_path do |f| %>
-  <div class="container form-box mt-4 mb-4 p-3 car">
+  <div class="container form-quizz mt-4 mb-4 p-3 car">
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -14,23 +14,23 @@
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
       </div>
-      <div class="carousel-inner content">
-        <div class="carousel-item active">
+      <div class="carousel-inner content d-flex align-items-center">
+        <div class="carousel-item active radio-margin">
           <%= f.input :you_wake_up_in_the_morning_and_you_drink, as: :radio_buttons, collection: ['coffee with sugar', 'coffee and no sugar', 'tea', 'milk', 'nothing'] %>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item radio-margin">
           <%= f.input :fruits_you_like, as: :radio_buttons, collection: ['citrus only', 'refreshing fruit', 'wild berries', 'bleahhh'] %>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item radio-margin">
           <%= f.input :you_put_salt, as: :radio_buttons, collection: ['on everything!', 'not at all', 'a bit'] %>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item radio-margin">
           <%= f.input :my_friends_call_me, as: :radio_buttons, collection: ['Adventureous', 'Traditional', 'Naughty'] %>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item radio-margin">
           <%= f.input :pasta_or_pizza_topping, as: :radio_buttons, collection: ['hotttt spicyyyyy', 'truffle or mushrooms', 'vegetables', 'cheesy'] %>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item radio-margin">
           <%= f.input :you_like_to_drink_at, as: :radio_buttons, collection: ['aperitivo', 'special event', 'dinner with friends', 'all the time, doesnt really matter'] %>
         </div>
       </div>

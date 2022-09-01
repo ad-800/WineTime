@@ -1,5 +1,5 @@
 .content {
-  padding: 30px 80px 30px 80px;
+  padding: 30px 60px 30px 60px;
   height: 49vh;
 }
 
@@ -15,11 +15,18 @@
   height:   50px;
 }
 
+.form-quizz {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 4px;
+  background-color: white;
+  width: 90%;
+}
 
-
-
-
-
+.form-check {
+  width: 50%;
+  margin: auto;
+  text-align: start;
+}
 
 
 
