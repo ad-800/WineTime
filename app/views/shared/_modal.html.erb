@@ -2,28 +2,25 @@
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-body">
-        <h3><%= wine.name %></h3>
-        <%= cl_image_tag wine.photo.key %>
+        <h2><%= wine.name %></h2>
+        <%= cl_image_tag wine.photo.key, class: "responsive", style: 'height:21rem;' %>
         <br><br>
-        <p>Description: <%= wine.description %></p>
-        <p>Rating: <%= wine.rating %></p>
-        <p>Country: <%= wine.country %></p>
-        <p>Region: <%= wine.region %></p>
-        <p>Color: <%= wine.color %></p>
-        <p>Occasion: <%= wine.wine_type %></p>
-        <p>Price: €<%= wine.price %></p>
+        <p><span>Description:</span> <%= wine.description %></p>
+        <p><span>Rating:</span> <%= wine.rating %></p>
+        <p><span>Country:</span> <%= wine.country %></p>
+        <p><span>Region:</span> <%= wine.region %></p>
+        <p><span>Color:</span> <%= wine.color %></p>
+        <p><span>Occasion:</span> <%= wine.wine_type %></p>
+        <p><span>Price:</span> €<%= wine.price %></p>
       </div>
-      <div class="modal-footer; text-align: center; margin-bottom">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-
-        <%# Drop down Menu  %>
-
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
         <% if @collections.size > 0 %>
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Add to Collection
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-dark">
               <% @collections.each do |collection| %>
                 <li>
                   <%= simple_form_for :collection, url: add_wine_collection_path(collection) do |f| %>
@@ -35,7 +32,7 @@
             </ul>
           </div>
         <% else %>
-          <div class="btn btn-secondary">
+          <div class="btn btn-warning">
             <%= link_to "Add to Collection", new_collection_path(:wine => wine.id), :class => "btn" %>
           </div>
         <% end %>
