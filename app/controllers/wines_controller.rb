@@ -1,7 +1,17 @@
 class WinesController < ApplicationController
 
   def index
-    @wines = Wine.all
+    if params[:query].present?
+      @wines = Wine.search_wines(params[:query])
+      if @wines.any?
+        @search = true
+      else
+        @search = nil
+      end
+    else
+      @wines = Wine.all
+      @search = false
+    end
   end
 
   def show

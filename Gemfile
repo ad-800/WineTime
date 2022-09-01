@@ -6,6 +6,7 @@ ruby "3.1.2"
 # New gems specifically for WineTime
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
+gem "pg_search"
 
 # 1. Better Errors https://github.com/BetterErrors/better_errors
 group :development do
