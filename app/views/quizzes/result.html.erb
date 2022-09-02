@@ -1,8 +1,11 @@
 <div class="container">
-  <h1>Results</h1>
-  <%= image_tag "28.svg", class: 'scribble-sm' %>
+  <div class="results-header">
+    <h1 class="mb-3"><u>Your Results</u></h1>
+    <%= image_tag "28.svg", class: 'scribble-result-right' %>
+    <%= image_tag "28.svg", class: 'scribble-result-left' %>
+    <%= render 'shared/personalities'  %>
+  </div>
 
-  <%= render 'shared/personalities'  %>
   <%= render 'shared/quizzesrec' %>
 
   <div class='divider mt-5 mb-5'>
@@ -10,8 +13,8 @@
 
   <% if !user_signed_in? %>
     <h3 class='mt-5'>Like what you see?</h3>
-    <p>Sign up and see many more recomendations!</p>
-     <%= image_tag "30.svg", class: 'scribble-md' %>
+    <p>Sign up and see more recommendations!</p>
+     <%= image_tag "30.svg", class: 'scribble-arrow' %>
     <%= render 'shared/signup', answers: @answers %>
   <% end %>
 </div>
