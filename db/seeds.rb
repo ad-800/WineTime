@@ -29,7 +29,8 @@ parameters = {
   fruit: 8,
   mineral: 2,
   spice: 7,
-  earth: 7
+  earth: 7,
+  wine_unique_id: 1
 }
 
 puts parameters[:name]
@@ -54,7 +55,8 @@ parameters = {
   fruit: 8,
   mineral: 5,
   spice: 2,
-  earth: 0
+  earth: 0,
+  wine_unique_id: 2
 }
 
 puts parameters[:name]
@@ -79,7 +81,8 @@ parameters = {
   fruit: 5,
   mineral: 9,
   spice: 0,
-  earth: 2
+  earth: 2,
+  wine_unique_id: 3
 }
 
 puts parameters[:name]
@@ -104,7 +107,8 @@ parameters = {
   fruit: 8,
   mineral: 1,
   spice: 8,
-  earth: 5
+  earth: 5,
+  wine_unique_id: 4
 }
 
 puts parameters[:name]
@@ -129,7 +133,8 @@ parameters = {
   fruit: 2,
   mineral: 8,
   spice: 3,
-  earth: 3
+  earth: 3,
+  wine_unique_id: 5
 }
 
 puts parameters[:name]
@@ -154,7 +159,8 @@ parameters = {
   fruit: 8,
   mineral: 1,
   spice: 6,
-  earth: 7
+  earth: 7,
+  wine_unique_id: 6
 }
 
 puts parameters[:name]
@@ -179,7 +185,8 @@ parameters = {
   fruit: 9,
   mineral: 3,
   spice: 7,
-  earth: 4
+  earth: 4,
+  wine_unique_id: 7
 }
 
 puts parameters[:name]
@@ -204,7 +211,8 @@ parameters = {
   fruit: 8,
   mineral: 3,
   spice: 7,
-  earth: 4
+  earth: 4,
+  wine_unique_id: 8
 }
 
 puts parameters[:name]
@@ -229,7 +237,8 @@ parameters = {
   fruit: 3,
   mineral: 5,
   spice: 8,
-  earth: 8
+  earth: 8,
+  wine_unique_id: 9
 }
 
 puts parameters[:name]
@@ -256,7 +265,8 @@ parameters = {
   fruit: 2,
   mineral: 2,
   spice: 9,
-  earth: 9
+  earth: 9,
+  wine_unique_id: 10
 }
 
 puts parameters[:name]
@@ -283,7 +293,8 @@ parameters = {
   fruit: 3,
   mineral: 3,
   spice: 6,
-  earth: 10
+  earth: 10,
+  wine_unique_id: 11
 }
 
 puts parameters[:name]
@@ -308,7 +319,8 @@ parameters = {
   fruit: 7,
   mineral: 8,
   spice: 0,
-  earth: 0
+  earth: 0,
+  wine_unique_id: 12
 }
 
 puts parameters[:name]
@@ -333,7 +345,8 @@ parameters = {
   fruit: 3,
   mineral: 5,
   spice: 5,
-  earth: 1
+  earth: 1,
+  wine_unique_id: 13
 }
 
 puts parameters[:name]
@@ -358,7 +371,8 @@ parameters = {
   fruit: 6,
   mineral: 7,
   spice: 4,
-  earth: 0
+  earth: 0,
+  wine_unique_id: 14
 }
 
 puts parameters[:name]
@@ -383,7 +397,8 @@ parameters = {
   fruit: 8,
   mineral: 5,
   spice: 9,
-  earth: 5
+  earth: 5,
+  wine_unique_id: 15
 }
 
 puts parameters[:name]

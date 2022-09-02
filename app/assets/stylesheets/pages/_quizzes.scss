@@ -1,5 +1,4 @@
 .content {
-  padding: 30px 60px 30px 60px;
   height: 49vh;
 }
 
@@ -8,11 +7,22 @@
 }
 
 .img-quizz {
-  height: 100px;
+  height: 120px;
 }
 
-.scribble-quizz {
-  height:   50px;
+.scribble-quizz-1 {
+  position: absolute;
+  width: 42px;
+  bottom: 0px;
+  right: -35px;
+  transform: rotateZ(90deg);
+}
+
+.scribble-quizz-2 {
+  position: absolute;
+  width: 61px;
+  top: 0px;
+  left: -3px;
 }
 
 .form-quizz {
@@ -26,6 +36,13 @@
   width: 50%;
   margin: auto;
   text-align: start;
+}
+
+.quiz-headers {
+  position: relative;
+  width: 296px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 

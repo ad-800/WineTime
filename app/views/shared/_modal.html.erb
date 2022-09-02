@@ -31,6 +31,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
+        <% if !@collections.nil? %>
           <% if @collections.size > 0 %>
             <div class="dropdown">
               <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,6 +54,7 @@
             </div>
           <% end %>
         </div>
+        <% end %>
       </div>
     </div>
   </div>
