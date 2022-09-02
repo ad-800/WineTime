@@ -23,7 +23,12 @@ class QuizzesController < ApplicationController
   end
 
   def personality
+    @wines = Wine.all
     @personalities = Personality.all
     @personality = Personality.order('RANDOM()').first
+    @wine_by_personality = []
+    @personality.wines[0..2].each do |wine|
+      @wine_by_personality << @wines.find_by(wine_unique_id: wine)
+    end
   end
 end
