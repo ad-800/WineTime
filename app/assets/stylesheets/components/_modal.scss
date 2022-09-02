@@ -1,3 +1,25 @@
 .modal-body {
   color: black;
+  overflow: inherit;
+}
+
+.show-img {
+  height: 5vh;
+  object-fit: contain;
+}
+
+.wine-show {
+  height: 20vh;
+}
+
+.show-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+
+.show-specs {
+  display: flex;
+  flex-direction: column;
 }
