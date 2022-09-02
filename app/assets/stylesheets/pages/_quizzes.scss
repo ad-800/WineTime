@@ -1,5 +1,4 @@
 .content {
-  padding: 30px 60px 30px 60px;
   height: 49vh;
 }
 
@@ -12,7 +11,11 @@
 }
 
 .scribble-quizz {
-  height:   50px;
+  position: absolute;
+  width: 40px;
+  bottom: 0px;
+  right: -51px;
+  transform: rotateZ(45deg);
 }
 
 .form-quizz {
@@ -26,6 +29,13 @@
   width: 50%;
   margin: auto;
   text-align: start;
+}
+
+.quiz-headers {
+  position: relative;
+  width: 296px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
