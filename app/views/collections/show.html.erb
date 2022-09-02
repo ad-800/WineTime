@@ -3,12 +3,7 @@
   <% if @wines.empty? %>
     <p>No wines in list</p>
   <% else %>
-    <% @wines.each do |wine| %>
-        <p><%= wine.name %></p>
-    <% end %>
+  <% @recommended = @wines %>
+  <%= render 'shared/recommendations', collections: @collections %>
   <% end %>
 </div>
-
-<% @recommended = @wines %>
-
-<%= render 'shared/recommendations', collections: @collections %>
