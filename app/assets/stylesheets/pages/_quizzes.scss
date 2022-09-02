@@ -7,15 +7,22 @@
 }
 
 .img-quizz {
-  height: 100px;
+  height: 120px;
 }
 
-.scribble-quizz {
+.scribble-quizz-1 {
   position: absolute;
-  width: 40px;
+  width: 42px;
   bottom: 0px;
-  right: -51px;
-  transform: rotateZ(45deg);
+  right: -35px;
+  transform: rotateZ(90deg);
+}
+
+.scribble-quizz-2 {
+  position: absolute;
+  width: 61px;
+  top: 0px;
+  left: -3px;
 }
 
 .form-quizz {
