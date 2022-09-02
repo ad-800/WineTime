@@ -10,12 +10,12 @@
       <div class="d-block w-100">
         <%= cl_image_tag wine.photo.key, class: "responsive" %>
       </div>
-      <%# <div class="carousel-caption">
+      <div class="carousel-caption">
         <div class="wine-title-info">
-          <%# <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#wine-<%= wine.id %><%#">More Information</button> %>
-        <%# </div>
+          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#wine-<%= wine.id %>">More Information</button>
+        </div>
         <%= render "shared/modal", wine: wine %>
-      <%# </div>  %>
+      </div>
     </div>
     <% end %>
   </div>
