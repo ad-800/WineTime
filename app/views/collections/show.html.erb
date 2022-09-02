@@ -1,10 +1,14 @@
 <h1>Collection: <%= @collection.title %></h1>
 <div>
-<% if @wines.empty? %>
-  <p>No wines in list</p>
-<% else %>
-  <% @wines.each do |wine| %>
-      <p><%= wine.name %></p>
+  <% if @wines.empty? %>
+    <p>No wines in list</p>
+  <% else %>
+    <% @wines.each do |wine| %>
+        <p><%= wine.name %></p>
+    <% end %>
   <% end %>
-<% end %>
 </div>
+
+<% @recommended = @wines %>
+
+<%= render 'shared/recommendations', collections: @collections %>
