@@ -57,9 +57,7 @@
               </ul>
             </div>
           <% else %>
-            <div class="btn btn-warning">
-              <%= link_to "Add to Collection", new_collection_path(:wine => wine.id), :class => "btn" %>
-            </div>
+            <%= link_to "Create a Collection", new_collection_path(:wine => wine.id), :class => "btn btn-warning" %>
           <% end %>
         <% end %>
         </div>

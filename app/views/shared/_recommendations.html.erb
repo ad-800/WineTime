@@ -8,7 +8,7 @@
       <% c += 1 %>
     <% end %>
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner" data-bs-interval="5000">
     <% @recommended.each do |wine| %>
     <div class="carousel-item <%= "active" if wine.name == @recommended[0].name %>">
       <div class="d-block w-100">
