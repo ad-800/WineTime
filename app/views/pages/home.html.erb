@@ -1,8 +1,8 @@
-<div class="d-flex flex-column justify-content-center align-items-center">
+<div class="align-items-center container">
   <h1>WineTime</h1>
   <p>It's time...</p>
-  <%= link_to 'Start Questionnaire', new_quiz_path, :class => "btn btn-warning mb-4" %>
-  <div class="home-description-cards d-grid gap-3">
+  <%= link_to 'Start Questionnaire', new_quiz_path, class: "btn btn-warning mb-4" %>
+  <div class="home-description-cards d-grid gap-3 d-flex flex-column justify-content-center align-items-center">
     <div class="home-description">
       <h3>Find Your Preferences</h2>
       <%= image_tag "dalle-wine-girl.png", alt: "rss feed", size: "120x120", class: "home-doodle-1" %>
