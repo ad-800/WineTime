@@ -3,3 +3,29 @@
   border-image: linear-gradient(to left, rgba(100, 100, 100, 0), rgba(100, 100, 100, 1), rgba(100, 100, 100, 0));
   border-image-slice: 1;
 }
+
+.results-header {
+  position: relative;
+  max-width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scribble-result-right {
+  height: 50px;
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  transform: rotateZ(110deg);
+}
+
+.scribble-result-left {
+  height: 50px;
+  position: absolute;
+  top: 12px;
+  left: 17px;
+}
+
+.scribble-arrow {
+  height: 40px;
+}
