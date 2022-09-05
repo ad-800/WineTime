@@ -5,7 +5,7 @@
 <% end %>
 <div>
   <% if @wines.empty? %>
-   <p>No wines in list</p>
+    <p>No wines in collection</p>
   <% else %>
   <% @recommended = @wines %>
   <%= render 'shared/recommendations', collections: @collections %>
