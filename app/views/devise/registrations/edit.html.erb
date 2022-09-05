@@ -12,6 +12,7 @@
       <%= f.input :bio, as: :text,
                   hint: "tell us more about youself and your wine preferences",
                   input_html: { autocomplete: "bio" } %>
+      <%= f.input :photo, as: :file %>
 
       <%= f.input :email, required: true, autofocus: true %>
 
