@@ -61,7 +61,7 @@
                 <% end %>
               </ul>
             </div>
-          <% elsif @remove == "true" %>
+          <% elsif @remove %>
           <% bottle = CollectionWine.find_by(collection: @collection, wine: wine) %>
           <%= button_to "Remove from Collection", collection_wine_path(bottle), method: "delete", class: "btn btn-warning", form: { data: {turbo_confirm: 'Are you sure?'} } %>
           <% else %>
