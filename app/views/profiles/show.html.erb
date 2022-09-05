@@ -6,7 +6,7 @@
   <% end %>
   <h3 class="mt-3">@<%= @user.username %></h3>
   <p><%= @user.bio %></p>
-  <h2 class="mb-3">Your Wines</h2>
+  <h2 class="mb-3"><%= @user.username.capitalize %> Wines</h2>
   <div class="my-collection gap-3 mb-3">
     <% @collections.each do |collection| %>
       <div class="list">
@@ -16,7 +16,7 @@
       form: { data: {turbo_confirm: 'Are you sure?'} } %>
       </div>
     <% end %>
-    <%= link_to '<i class="fa-solid fa-plus"></i>&nbsp;Create Collection'.html_safe, new_collection_path, class:"list",
+    <%#= link_to '<i class="fa-solid fa-plus"></i>&nbsp;Create collection'.html_safe, new_collection_path, class:"list",
     style: "text-decoration: none; color: white; background-color: black;"%>
   </div>
 </div>
