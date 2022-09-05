@@ -1,6 +1,7 @@
 class WinesController < ApplicationController
   def index
-    @collections = Collection.all
+    user = current_user
+    @collections = user.collections
     if params[:query].present?
       @wines = Wine.search_wines(params[:query])
       if @wines.any?
