@@ -35,7 +35,8 @@
             <% end %>
             </a>
             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu dropdown-menu-end">
-              <%= link_to "My Profile", me_profiles_path, class: "dropdown-item" %>
+              <%= link_to "My Collections", me_profiles_path, class: "dropdown-item" %>
+              <%= link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item" %>
               <%= link_to "Log Out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item", method: :delete %>
             </ul>
           </li>
