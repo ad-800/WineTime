@@ -3,7 +3,7 @@
   <div class="my-collection gap-3 mb-3">
     <% @collections.each do |collection| %>
       <div class="list">
-      <%= link_to collection.title, user_collection_path(id: collection.id, user_id: current_user) %>
+      <%= link_to collection.title, user_collection_path(id: collection.id, user_id: current_user, :remove => true) %>
       <%= button_to '<i class="fa-solid fa-xmark"></i>'.html_safe, collection_path(id: collection.id),
       method: :delete, class: "btn btn-outline-warning", style: "margin-left: 5px; padding: 0px 2px; border: none;",
       form: { data: {turbo_confirm: 'Are you sure?'} } %>
