@@ -40,7 +40,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
         <% if !@collections.nil? %>
-          <% if @collections.size > 0 %>
+          <% if @collections.size > 0 && @remove.nil? %>
             <div class="dropdown">
               <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Add to Collection
@@ -56,6 +56,11 @@
                 <% end %>
               </ul>
             </div>
+            <%# raise %>
+          <% elsif @remove == "true" %>
+            <button class="btn btn-warning dropdown-toggle" type="button" aria-expanded="false">
+                Remove from Collection
+            </button>
           <% else %>
             <%= link_to "Create a Collection", new_collection_path(:wine => wine.id), :class => "btn btn-warning" %>
           <% end %>
