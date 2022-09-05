@@ -61,13 +61,11 @@
                 <% end %>
               </ul>
             </div>
-            <%# raise %>
           <% elsif @remove == "true" %>
-            <button class="btn btn-warning dropdown-toggle" type="button" aria-expanded="false">
-                Remove from Collection
-            </button>
+          <% bottle = CollectionWine.find_by(collection: @collection, wine: wine) %>
+          <%= button_to "Remove from Collection", collection_wine_path(bottle), method: "delete", class: "btn btn-warning", form: { data: {turbo_confirm: 'Are you sure?'} } %>
           <% else %>
-            <%= link_to "Create a Collection", new_collection_path(:wine => wine.id), class: "btn btn-warning" %>
+            <%= link_to "Create a Collection", new_collection_path(wine: wine.id), class: "btn btn-warning" %>
           <% end %>
         <% end %>
         </div>
