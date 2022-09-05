@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
     @collections = Collection.where(user: current_user)
     recommend_wine
     # rendering the page to specific page
-    render :show
+    # render :show
   end
 
   def show
@@ -23,5 +23,6 @@ class ProfilesController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
+    # @user = User.find_by(username: params[:id])
   end
 end
