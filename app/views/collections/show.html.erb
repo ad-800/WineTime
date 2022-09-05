@@ -1,4 +1,8 @@
-<h1>Your Collection: <%= @collection.title %></h1>
+<% if @user.id == current_user.id %>
+  <h1>Your Collection: <%= @collection.title %></h1>
+<% else %>
+  <h1><%= @user.username.capitalize %>'s <%= @collection.title %></h1>
+<% end %>
 <div>
   <% if @wines.empty? %>
     <p>No wines in collection</p>
@@ -7,3 +11,6 @@
   <%= render 'shared/recommendations', collections: @collections %>
   <% end %>
 </div>
+<% if @user.id != current_user.id %>
+  <%= link_to "Visit users profile", profile_path(@user.username), class:'btn btn-primary mt-3' %>
+<% end %>

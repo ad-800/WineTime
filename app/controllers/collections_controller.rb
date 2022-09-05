@@ -10,6 +10,7 @@ class CollectionsController < ApplicationController
     @collections = Collection.all
     @collection = Collection.find(params[:id])
     @wines = @collection.wines
+    @user = User.find(params[:user_id])
   end
 
   def new
@@ -49,6 +50,10 @@ class CollectionsController < ApplicationController
     @bottle = CollectionWine.new(collection_id: params[:id], wine_id: params[:collection][:wine])
     @bottle.save
     redirect_to me_profiles_path(current_user)
+  end
+
+  def result
+    @collections = Collection.search_by_title(params[:query])
   end
 
   private
