@@ -30,7 +30,8 @@ parameters = {
   mineral: 2,
   spice: 7,
   earth: 7,
-  wine_unique_id: 1
+  wine_unique_id: 1,
+  url: 'https://www.tannico.it/en/salento-negroamaro-rosato-igt-calafuria-2021-tormaresca.html'
 }
 
 puts parameters[:name]
@@ -56,7 +57,8 @@ parameters = {
   mineral: 5,
   spice: 2,
   earth: 0,
-  wine_unique_id: 2
+  wine_unique_id: 2,
+  url: 'https://www.tannico.it/en/douro-branco-eleivera-2019-dos-lusiadas.html'
 }
 
 puts parameters[:name]
@@ -82,7 +84,8 @@ parameters = {
   mineral: 9,
   spice: 0,
   earth: 2,
-  wine_unique_id: 3
+  wine_unique_id: 3,
+  url: 'https://www.tannico.it/en/baden-riesling-aop-2020-schieferkopf-tappo-a-vite.html'
 }
 
 puts parameters[:name]
@@ -108,7 +111,8 @@ parameters = {
   mineral: 1,
   spice: 8,
   earth: 5,
-  wine_unique_id: 4
+  wine_unique_id: 4,
+  url: 'https://www.tannico.it/en/bordeaux-rouge-ronan-by-clinet-clinet-2014.html'
 }
 
 puts parameters[:name]
@@ -134,7 +138,8 @@ parameters = {
   mineral: 8,
   spice: 3,
   earth: 3,
-  wine_unique_id: 5
+  wine_unique_id: 5,
+  url: 'https://www.tannico.it/en/champagne-brut-special-cuvee-bollinger.html'
 }
 
 puts parameters[:name]
@@ -160,7 +165,8 @@ parameters = {
   mineral: 1,
   spice: 6,
   earth: 7,
-  wine_unique_id: 6
+  wine_unique_id: 6,
+  url: 'https://www.tannico.it/en/valpolicella-ripasso-classico-superiore-doc-le-poiane-2018-bolla.html'
 }
 
 puts parameters[:name]
@@ -186,7 +192,8 @@ parameters = {
   mineral: 3,
   spice: 7,
   earth: 4,
-  wine_unique_id: 7
+  wine_unique_id: 7,
+  url: 'https://www.tannico.it/en/vino-de-chile-las-nubes-2019-domaine-derain.html'
 }
 
 puts parameters[:name]
@@ -212,7 +219,8 @@ parameters = {
   mineral: 3,
   spice: 7,
   earth: 4,
-  wine_unique_id: 8
+  wine_unique_id: 8,
+  url: 'https://www.tannico.it/en/ribera-del-duero-do-cl98-2020-casa-rojo.html'
 }
 
 puts parameters[:name]
@@ -238,7 +246,8 @@ parameters = {
   mineral: 5,
   spice: 8,
   earth: 8,
-  wine_unique_id: 9
+  wine_unique_id: 9,
+  url: 'https://www.tannico.it/en/california-cabernet-sauvignon-diamond-collection-ivory-label-2018-francis-ford-coppola-winery.html'
 }
 
 puts parameters[:name]
@@ -266,7 +275,8 @@ parameters = {
   mineral: 2,
   spice: 9,
   earth: 9,
-  wine_unique_id: 10
+  wine_unique_id: 10,
+  url: 'https://www.tannico.it/en/friuli-colli-orientali-merlot-doc-2017-dri-roncat.html'
 }
 
 puts parameters[:name]
@@ -294,7 +304,8 @@ parameters = {
   mineral: 3,
   spice: 6,
   earth: 10,
-  wine_unique_id: 11
+  wine_unique_id: 11,
+  url: 'https://www.tannico.it/en/douro-tinto-duas-quintas-2019-casa-ramos-pinto.html'
 }
 
 puts parameters[:name]
@@ -320,7 +331,8 @@ parameters = {
   mineral: 8,
   spice: 0,
   earth: 0,
-  wine_unique_id: 12
+  wine_unique_id: 12,
+  url: 'https://www.tannico.it/en/vino-bianco-encruzado-e-arinto-2020-quinta-de-serradinha.html'
 }
 
 puts parameters[:name]
@@ -346,7 +358,8 @@ parameters = {
   mineral: 5,
   spice: 5,
   earth: 1,
-  wine_unique_id: 13
+  wine_unique_id: 13,
+  url: 'https://www.tannico.it/en/catalogsearch/result/?q=Kamptal+Gr%C3%BCner+Veltliner+1+%C3%96TW+DAC+%22Schenkenbichl%22+2016'
 }
 
 puts parameters[:name]
@@ -361,7 +374,7 @@ new_wine.save
 parameters = {
   name: 'Valdobbiadene Prosecco Superiore Brut "Cuvée del Fondatore" 2020 - Valdo',
   description: 'Enjoy it fish-based appetizers, meat or mushroom-based appetizers.',
-  price: 24.17,
+  price: 12.90,
   rating: 92,
   country: 'Italy',
   region: 'Valdobbiadene',
@@ -372,7 +385,8 @@ parameters = {
   mineral: 7,
   spice: 4,
   earth: 0,
-  wine_unique_id: 14
+  wine_unique_id: 14,
+  url: 'https://www.tannico.it/en/valdobbiadene-prosecco-superiore-brut-cuvee-del-fondatore-2020-valdo.html'
 }
 
 puts parameters[:name]
@@ -398,7 +412,8 @@ parameters = {
   mineral: 5,
   spice: 9,
   earth: 5,
-  wine_unique_id: 15
+  wine_unique_id: 15,
+  url: 'https://www.tannico.it/en/jumilla-garnacha-do-enemigo-mio-2021-casa-rojo.html'
 }
 
 puts parameters[:name]

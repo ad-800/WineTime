@@ -1,4 +1,4 @@
-class CollectionwinesController < ApplicationController
+class CollectionWinesController < ApplicationController
   def destroy
     @bottle = CollectionWine.find(params[:id])
     @bottle.destroy

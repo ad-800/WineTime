@@ -1,11 +1,12 @@
 class CollectionsController < ApplicationController
-  before_action :set_collection, only: %i[show edit update destroy]
+  before_action :set_collection, only: %i[show update destroy]
 
   def index
     @collections = Collection.all
   end
 
   def show
+    @remove = params[:remove]
     @collections = Collection.all
     @collection = Collection.find(params[:id])
     @wines = @collection.wines
@@ -31,9 +32,6 @@ class CollectionsController < ApplicationController
   def add_wine_to_collection
     @bottle = CollectionWine.new(collection_id: @collection.id, wine_id: params[:bottle])
     @bottle.save
-  end
-
-  def edit
   end
 
   def update

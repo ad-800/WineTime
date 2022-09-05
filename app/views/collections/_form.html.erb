@@ -1,8 +1,8 @@
 <%= simple_form_for(collection) do |f| %>
   <%= f.input :title,
+              placeholder: 'enter the collection name',
               required: true,
-              autofocus: true,
-              hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+              minlength: 1 %>
   <%= hidden_field_tag 'bottle', @bottle %>
   <%= f.button :submit %>
 <% end %>
