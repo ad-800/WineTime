@@ -2,6 +2,7 @@
 <div>
   <% if @wines.empty? %>
     <p>No wines in collection</p>
+    <%= image_tag 'search_again.png', class: 'search-img' %>
   <% else %>
   <% @recommended = @wines %>
   <%= render 'shared/recommendations', collections: @collections %>

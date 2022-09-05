@@ -4,7 +4,7 @@
 }
 
 .show-img {
-  height: 5vh;
+  height: 6vh;
   object-fit: contain;
 }
 
@@ -13,13 +13,19 @@
 }
 
 .show-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 45px;
 }
 
-
 .show-specs {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.show-specs > p {
+  padding-left: 10px;
   display: flex;
   flex-direction: column;
 }

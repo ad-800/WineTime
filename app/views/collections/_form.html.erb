@@ -1,8 +1,8 @@
 <%= simple_form_for(collection) do |f| %>
   <%= f.input :title,
-              placeholder: 'enter the collection name',
+              placeholder: 'Collection Name',
               required: true,
               minlength: 1 %>
   <%= hidden_field_tag 'bottle', @bottle %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "btn btn-warning" %>
 <% end %>
