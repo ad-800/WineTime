@@ -9,6 +9,7 @@
 .my-collection {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .list > a {
