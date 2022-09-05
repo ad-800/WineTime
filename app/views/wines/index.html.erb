@@ -1,82 +1,16 @@
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-xs-12">
-      <div id="movies">
-          <% @wines.each do |wine| %>
-            <div class="search-card mb-4">
-              <h4><%= wine.name %></h4>
-              <p><%= cl_image_tag wine.photo.key, class: 'responsive' %></p>
-              <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Show
-              </button>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                      <div class="row; text-end">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="row">
-                          <div class="col-sm-12 col-md-6">
-                            <%= cl_image_tag wine.photo.key, class: "responsive wine-show mb-2" %>
-                          </div>
-                          <div class="col-sm-12 col-md-6">
-                            <h3 class='text-left'><%= wine.name %></h3>
-                            <br><br>
-                            <div class="show-grid">
-                              <div class='show-specs'>
-                                <%= image_tag "rating.png", class:'show-img' %>
-                                <p><strong>Rating:</strong> <%= wine.rating %></p>
-                              </div>
-                              <div class='show-specs'><%= image_tag "location.png", class:'show-img' %><p><strong>Country:</strong> <%= wine.country %></p></div>
-                              <div class='show-specs'><%= image_tag "region.png", class:'show-img' %><p><strong>Region:</strong> <%= wine.region %></p></div>
-                              <% if wine.color == 'Red' %>
-                                <div class='show-specs'><%= image_tag "color-red.png", class:'show-img' %><p><strong>Color:</strong> <%= wine.color %></p></div>
-                              <% elsif wine.color == 'White' %>
-                                <div class='show-specs'><%= image_tag "color-white.png", class:'show-img' %><p><strong>Color:</strong> <%= wine.color %></p></div>
-                              <% elsif wine.color == 'Rose' %>
-                                <div class='show-specs'><%= image_tag "color-rose.png", class:'show-img' %><p><strong>Color:</strong> <%= wine.color %></p></div>
-                              <% else %>
-                                <div class='show-specs'><%= image_tag "color-champagne.png", class:'show-img' %><p><strong>Color:</strong> <%= wine.color %></p></div>
-                              <% end %>
-                              <div class='show-specs'><%= image_tag "price.png", class:'show-img' %><p><strong>Price:</strong> €<%= wine.price %></p></div>
-                            </div>
-                          </div>
-                          <div class='divider mt-4 mb-4'></div>
-                          <div  >
-                            <h4>This is wine tastes best when:</h4>
-                            <p><%= wine.description %></p>
-                            <p><strong>Occasion:</strong> <%= wine.wine_type %></p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <a href="<%= wine.url %>" target="_blank">
-                          <button type="button" class="btn btn-outline-warning">Buy</button>
-                        </a>
-                        <div class="dropdown">
-                          <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Add to Collection
-                          </button>
-                          <ul class="dropdown-menu dropdown-menu-dark">
-                            <% @collections.each do |collection| %>
-                              <li>
-                                <%= simple_form_for :collection, url: add_wine_collection_path(collection) do |f| %>
-                                  <%= f.input :wine, as: :hidden, input_html: { value: wine.id } %>
-                                  <%= f.submit collection.title, class: "dropdown-item" %>
-                                <% end %>
-                              </li>
-                            <% end %>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        <% end %>
+  <h2>Results</h2>
+  <div class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3">
+    <% @wines.each do |wine| %>
+      <div class="search-card mb-4">
+        <!-- <h4><%= wine.name %></h4> -->
+        <p><%= cl_image_tag wine.photo.key, class: 'responsive' %></p>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#wine-<%= wine.id %>">
+          More Information
+        </button>
+        <%= render "shared/modal", wine: wine %>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
 
