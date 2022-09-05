@@ -1,6 +1,6 @@
 class Wine < ApplicationRecord
   has_one_attached :photo
-  has_many :collection_wines
+  has_many :collection_wines, dependent: :destroy
 
   include PgSearch::Model
 
