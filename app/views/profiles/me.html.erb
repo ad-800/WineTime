@@ -42,6 +42,21 @@
   </div>
 </div>
 
+<br>
+<h2 class="mb-3">Your Bookmarks</h2>
+<div class="my-collection gap-3 mb-3">
+  <% @bookmarks.each do |bookmark| %>
+    <div class="list">
+      <%#= bookmark.collection.title  %>
+      <%= link_to bookmark.collection.title, user_collection_path(id: bookmark.collection.id, user_id: bookmark.collection.user.id) %>
+        <%= button_to '<i class="fa-solid fa-xmark"></i>'.html_safe, bookmark_path(id: bookmark.id),
+        method: :delete, class: "btn btn-outline-warning", style: "margin-left: 5px; padding: 0px 2px; border: none;",
+        form: { data: {turbo_confirm: 'Are you sure?'} } %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 <div>
   <br>
   <h2>Recommendations</h2>

@@ -4,6 +4,7 @@ class ProfilesController < ApplicationController
   def me
     @collections = Collection.where(user: current_user)
     recommend_wine
+    @bookmarks = Bookmark.where(user: current_user)
   end
 
   def show
