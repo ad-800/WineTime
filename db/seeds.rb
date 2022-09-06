@@ -212,7 +212,7 @@ parameters = {
   rating: 91,
   country: 'Portugal',
   region: 'Douro',
-  color: 'White',
+  color: 'Rose',
   wine_type: 'Light lunches.',
   bitter: 0,
   fruit: 8,
@@ -259,8 +259,6 @@ new_wine.save
 
 #10
 
-puts "Creating João's 10 seeds"
-
 parameters = {
   name: 'Friuli Colli Orientali Merlot DOC 2017 - Dri Roncat',
   description: 'Enjoy it with main dishes featuring red meat, Meat or mushroom-based pasta or rice dishes.',
@@ -287,6 +285,8 @@ new_wine.photo.attach(io: file, filename: "friuli.png", content_type: "png")
 new_wine.save
 
 puts "Finished planting"
+
+puts "Creating João's 10 seeds"
 
 # Joao 1
 
@@ -421,6 +421,141 @@ puts parameters[:name]
 file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1661965940/kwnpiy82dldjh1l0hghk.png")
 new_wine = Wine.new(parameters)
 new_wine.photo.attach(io: file, filename: "enemigo.png", content_type: "png")
+new_wine.save
+
+# Joao's 6
+
+parameters = {
+  name: 'Brunello di Montalcino Riserva DOCG 2013 - Biondi Santi',
+  description: 'Enjoy it with aged cheeses, main dishes featuring red meat.',
+  price: 490.00,
+  rating: 98,
+  country: 'Italy',
+  region: 'Tuscania',
+  color: 'Red',
+  wine_type: 'Special occasions.',
+  bitter: 4,
+  fruit: 8,
+  mineral: 6,
+  spice: 7,
+  earth: 8,
+  wine_unique_id: 16,
+  url: 'https://https://www.tannico.it/en/brunello-di-montalcino-riserva-docg-2013-biondi-santi.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662482225/lxcshm9w94a0naqu8nw2.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "biondi-santi.png", content_type: "png")
+new_wine.save
+
+# Joao's 7
+
+parameters = {
+  name: 'Rioja DOCa “Ruido” 2018 - Bodega La Quinta',
+  description: 'Excelent with meat or mushroom-based main dishes, meat or mushroom-based pasta or rice dishes.',
+  price: 22.25,
+  rating: 85,
+  country: 'Spain',
+  region: 'Rioja',
+  color: 'Red',
+  wine_type: 'Dinner with friends.',
+  bitter: 6,
+  fruit: 9,
+  mineral: 5,
+  spice: 6,
+  earth: 7,
+  wine_unique_id: 17,
+  url: 'https://www.tannico.com/rioja-doca-ruido-2018-bodega-la-quinta.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662482952/bavp4c30far876ikdhaq.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "ruido.png", content_type: "png")
+new_wine.save
+
+# Joao's 8
+
+parameters = {
+  name: 'Franschhoek Sauvignon Blanc "Grand Cuvée" 2020 - Boschendal',
+  description: 'Excelent with fish-based main dishes, vegetarian dishes.',
+  price: 24.79,
+  rating: 85,
+  country: 'South Africa',
+  region: 'Franschhoek',
+  color: 'White',
+  wine_type: 'Dinner with friends.',
+  bitter: 7,
+  fruit: 8,
+  mineral: 4,
+  spice: 4,
+  earth: 5,
+  wine_unique_id: 18,
+  url: 'https://www.tannico.com/franschhoek-sauvignon-blanc-grand-cuvee-2020-boschendal.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662483499/vztbw8sbehqxc9zi6jri.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "sau.png", content_type: "png")
+new_wine.save
+
+# Joao's 9
+
+parameters = {
+  name: 'Patagonia Chardonnay “Mainquè” 2020 - Bodega Chacra',
+  description: 'Excelent with fish-based appetizers, fish-based pasta or rice dishes.',
+  price: 61.06,
+  rating: 90,
+  country: 'Argentina',
+  region: 'Patagonia',
+  color: 'White',
+  wine_type: 'Dinner with friends.',
+  bitter: 6,
+  fruit: 9,
+  mineral: 6,
+  spice: 7,
+  earth: 4,
+  wine_unique_id: 19,
+  url: 'https://www.tannico.com/patagonia-chardonnay-mainque-2020-bodega-chacra-104328.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662483837/ek36djr4ztweo6pikfx5.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "tany.png", content_type: "png")
+new_wine.save
+
+# Joao's 10
+
+parameters = {
+  name: 'Champagne Brut "Réserve Impériale" - Moët & Chandon',
+  description: 'Excelent with fish-based appetizers, fish-based pasta or rice dishes.',
+  price: 56.91,
+  rating: 81,
+  country: 'France',
+  region: 'Champagne',
+  color: 'Champagne and Sparkling',
+  wine_type: 'Appetizer, Dinner with friends.',
+  bitter: 8,
+  fruit: 10,
+  mineral: 7,
+  spice: 7,
+  earth: 3,
+  wine_unique_id: 20,
+  url: 'https://www.tannico.com/champagne-brut-reserve-imperiale-moet-chandon.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662484089/k5sbxzumzdn8s5yhnkfe.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "reserveimperial.png", content_type: "png")
 new_wine.save
 
 puts "Finished planting Joao's seeds"
