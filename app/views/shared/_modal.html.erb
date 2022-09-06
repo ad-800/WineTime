@@ -41,7 +41,7 @@
           <button type="button" class="btn btn-outline-warning">Buy</button>
         </a>
         <% if !@collections.nil? %>
-          <% if @collections.size > 0 && @remove.nil? || current_user.id != @collection.user_id%>
+          <% if @collections.size > 0 && @remove.nil? %>
             <div class="dropdown">
               <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Add to Collection
