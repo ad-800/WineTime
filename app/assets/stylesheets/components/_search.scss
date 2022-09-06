@@ -6,3 +6,16 @@
 .search-img {
   height: 300px;
 }
+
+.search-btn {
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(-3%, -50%);
+}
+
+.border-search {
+  border-radius: 15px;
+}
