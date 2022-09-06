@@ -15,5 +15,6 @@
   <% end %>
 </div>
 <% if @user.id != current_user.id %>
+  <%= link_to "Bookmark this collection", new_bookmark_path(:collection => @collection.id), class:'btn btn-primary mt-3' %>
   <%= link_to "Visit users profile", profile_path(@user.username), class:'btn btn-primary mt-3' %>
 <% end %>
