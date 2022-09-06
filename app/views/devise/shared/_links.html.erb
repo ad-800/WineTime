@@ -2,7 +2,7 @@
   <%= link_to "Log in", new_session_path(resource_name), class: 'link' %><br />
 <% end %>
 
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+<%- if devise_mapping.registerable? && controller_name != 'registrations' && !current_page?(new_user_session_path) && !current_page?(result_quizzes_path) %>
   <%= link_to "Sign up", new_registration_path(resource_name), class: 'link' %><br />
 <% end %>
 
