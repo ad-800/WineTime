@@ -45,6 +45,7 @@
       </div>
       <h2 class="mb-3">Bookmarked Collections</h2>
       <div class="my-collection gap-3 mb-3">
+      <% if @bookmarks.size > 0 %>
         <% @bookmarks.each do |bookmark| %>
           <div class="list">
             <%#= bookmark.collection.title  %>
@@ -54,6 +55,9 @@
               form: { data: {turbo_confirm: 'Are you sure?'} } %>
           </div>
         <% end %>
+      <% else %>
+        <p>You have no bookmarks yet!<br>Start searching your favorite collections <i class="fa-solid fa-wine-bottle"></i></p>
+      <% end %>
       </div>
     </div>
 
