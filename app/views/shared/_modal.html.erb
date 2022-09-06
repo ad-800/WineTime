@@ -2,22 +2,18 @@
   <div class="modal fade" id="wine-<%= wine.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
       <div class="modal-content">
-        <div class="row; text-end">
+        <div class="row; text-end modal-close-button">
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <%= cl_image_tag wine.photo.key, class: "responsive wine-show mb-2" %>
+          <div class="row align-items-center">
+            <div class="col-sm-12 col-md-4">
+              <%= cl_image_tag wine.photo.key, class: "responsive wine-show mb-4" %>
             </div>
-            <div class="col-sm-12 col-md-6">
-              <h3 class='text-left'><%= wine.name %></h3>
-              <br><br>
+            <div class="col-sm-12 col-md-8">
+              <h2 class='text-left mb-4'><%= wine.name %></h2>
               <div class="show-grid">
-                <div class='show-specs'>
-                  <%= image_tag "rating.png", class:'show-img' %>
-                  <p><strong>Rating:</strong> <%= wine.rating %></p>
-                </div>
+                <div class='show-specs'><%= image_tag "rating.png", class:'show-img' %><p><strong>Rating:</strong> <%= wine.rating %></p></div>
                 <div class='show-specs'><%= image_tag "location.png", class:'show-img' %><p><strong>Country:</strong> <%= wine.country %></p></div>
                 <div class='show-specs'><%= image_tag "region.png", class:'show-img' %><p><strong>Region:</strong> <%= wine.region %></p></div>
                 <% if wine.color == 'Red' %>
@@ -29,15 +25,15 @@
                 <% else %>
                   <div class='show-specs'><%= image_tag "color-champagne.png", class:'show-img' %><p><strong>Color:</strong> <%= wine.color %></p></div>
                 <% end %>
-                <div class='show-specs'><%= image_tag "price.png", class:'show-img' %><p><strong>Price:</strong> €<%= wine.price %></p></div>
+                <div class='show-specs'><%= image_tag "price.png", class:'show-img' %><p><strong>Price:</strong> €<%= sprintf("%0.02f", wine.price) %></p></div>
               </div>
             </div>
-            <div class='divider mt-4 mb-4'></div>
-            <div>
-              <h4>This is wine tastes best when:</h4>
-              <p><%= wine.description %></p>
-              <p><strong>Occasion:</strong> <%= wine.wine_type %></p>
-            </div>
+          </div>
+          <div class='divider mt-4 mb-4'></div>
+          <div>
+            <h3 class="mb-3">This is wine tastes best with:</h3>
+            <p><%= wine.description %></p>
+            <p><strong>Occasion:</strong> <%= wine.wine_type %></p>
           </div>
         </div>
         <div class="modal-footer">
