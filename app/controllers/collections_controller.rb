@@ -53,13 +53,23 @@ class CollectionsController < ApplicationController
   end
 
   def result
-    @collections = Collection.search_by_title(params[:query])
+    if params[:cquery].present?
+      @collections = Collection.search_by_title(params[:cquery])
+      if @collections.any?
+        @search = true
+      else
+        @search = nil
+      end
+    else
+      @search = false
+      @collections = Collection.all
+    end
   end
 
   private
 
   def collection_params
-    params.require(:collection).permit(:title, :user_id)
+    params.require(:collection).permit(:title, :photo, :user_id)
   end
 
   def set_collection
