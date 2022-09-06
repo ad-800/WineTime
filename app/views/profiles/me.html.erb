@@ -30,10 +30,7 @@
           <i class="fa-solid fa-wine-bottle"></i>
         </button>
       <% end %>
-      <br>
-
       <h2 class="mb-3">Your Collections</h2>
-
       <div class="my-collection gap-3 mb-3">
         <% @collections.each do |collection| %>
           <div class="list">
@@ -46,28 +43,23 @@
         <%= link_to '<i class="fa-solid fa-plus"></i>&nbsp;Create collection'.html_safe, new_collection_path, class:"list",
         style: "text-decoration: none; color: white; background-color: black;"%>
       </div>
-    <% end %>
-    <%= link_to '<i class="fa-solid fa-plus"></i>&nbsp;Create collection'.html_safe, new_collection_path, class:"list",
-    style: "text-decoration: none; color: white; background-color: black;"%>
-  </div>
-</div>
-
-<h2 class="mb-3">Bookmarked Collections</h2>
-<div class="my-collection gap-3 mb-3">
-  <% @bookmarks.each do |bookmark| %>
-    <div class="list">
-      <%#= bookmark.collection.title  %>
-      <%= link_to bookmark.collection.title, user_collection_path(id: bookmark.collection.id, user_id: bookmark.collection.user.id) %>
-        <%= button_to '<i class="fa-solid fa-xmark"></i>'.html_safe, bookmark_path(id: bookmark.id),
-        method: :delete, class: "btn btn-outline-warning", style: "margin-left: 5px; padding: 0px 2px; border: none;",
-        form: { data: {turbo_confirm: 'Are you sure?'} } %>
+      <h2 class="mb-3">Bookmarked Collections</h2>
+      <div class="my-collection gap-3 mb-3">
+        <% @bookmarks.each do |bookmark| %>
+          <div class="list">
+            <%#= bookmark.collection.title  %>
+            <%= link_to bookmark.collection.title, user_collection_path(id: bookmark.collection.id, user_id: bookmark.collection.user.id) %>
+              <%= button_to '<i class="fa-solid fa-xmark"></i>'.html_safe, bookmark_path(id: bookmark.id),
+              method: :delete, class: "btn btn-outline-warning", style: "margin-left: 5px; padding: 0px 2px; border: none;",
+              form: { data: {turbo_confirm: 'Are you sure?'} } %>
+          </div>
+        <% end %>
       </div>
     </div>
-  <% end %>
-</div>
 
-<div class="col-sm-12 col-md-6">
-    <br>
-    <h2>Recommendations</h2>
-    <%= render 'shared/recommendations', collections: @collections %>
+    <div class="col-sm-12 col-md-6">
+      <h2>Recommendations</h2>
+      <%= render 'shared/recommendations', collections: @collections %>
+    </div>
+  </div>
 </div>
