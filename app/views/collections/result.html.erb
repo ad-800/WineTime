@@ -1,0 +1,10 @@
+<h1>Collections found:</h1>
+
+<div class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3">
+  <% @collections.each do |collection| %>
+    <div class="search-card mb-4">
+      <p><%= collection.title %> by <%= collection.user.username %></p>
+      <%= link_to "See collection", user_collection_path(collection.user, collection) %>
+    </div>
+  <% end %>
+</div>

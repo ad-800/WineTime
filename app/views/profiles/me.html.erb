@@ -14,9 +14,20 @@
       <% end %>
     </div>
   <% end %>
+
   <h3 class="mt-3">@<%= current_user.username %></h3>
   <p><%= current_user.bio %></p>
-  <h2 class="mb-3">Your Wines</h2>
+  <h2 class="mb-3">Your Collections</h2>
+
+  <%= form_with url: collections_result_path, method: :get, class: "d-flex mb-3" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find collections"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+
   <div class="my-collection gap-3 mb-3">
     <% @collections.each do |collection| %>
       <div class="list">

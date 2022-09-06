@@ -29,6 +29,8 @@ Rails.application.routes.draw do
     resources :collections, only: %i[new create index show]
   end
 
+  get "collections/result", to: "collections#result"
+
   resources :collections, only: %i[new create destroy] do
     member do
       post :add_wine
