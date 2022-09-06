@@ -6,13 +6,15 @@
 
       <div class="search-bar">
         <% if user_signed_in? %>
-          <%= form_with url: wines_path, method: :get, class: "d-flex" do %>
+          <%= form_with url: wines_path, method: :get, class: "d-flex position-relative" do %>
             <%= text_field_tag :query,
               params[:query],
-              class: "form-control",
+              class: "form-control border-search",
               placeholder: "Find wines"
             %>
-            <%= submit_tag "Search", class: "btn btn-primary" %>
+          <button type="submit" name="commit" data-disable-with="Search" class="search-btn">
+            <i class="fa-solid fa-wine-glass"></i>
+          </button>
           <% end %>
         <% end %>
       </div>
