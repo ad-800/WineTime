@@ -15,7 +15,8 @@
 .show-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px 45px;
+  gap: 15px 60px;
+  max-width: 35rem;
 }
 
 .show-specs {
@@ -28,4 +29,8 @@
   padding-left: 10px;
   display: flex;
   flex-direction: column;
+}
+
+.modal-close-button > .btn-close {
+  padding: 1.25em 1.25em;
 }

@@ -2,13 +2,13 @@
   <div class="modal fade" id="wine-<%= wine.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
       <div class="modal-content">
-        <div class="row; text-end">
+        <div class="row; text-end modal-close-button">
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
           <div class="row align-items-center">
             <div class="col-sm-12 col-md-4">
-              <%= cl_image_tag wine.photo.key, class: "responsive wine-show mb-2" %>
+              <%= cl_image_tag wine.photo.key, class: "responsive wine-show mb-4" %>
             </div>
             <div class="col-sm-12 col-md-8">
               <h2 class='text-left mb-4'><%= wine.name %></h2>
