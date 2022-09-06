@@ -20,8 +20,8 @@
       <h3 class="mt-3">@<%= current_user.username %></h3>
       <p><%= current_user.bio %></p>
       <%= form_with url: collections_result_path, method: :get, class: "d-flex mb-3 position-relative" do %>
-        <%= text_field_tag :query,
-          params[:query],
+        <%= text_field_tag :cquery,
+          params[:cquery],
           class: "form-control border-search",
           placeholder: "Search for collections"
         %>
