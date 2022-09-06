@@ -1,5 +1,4 @@
 .navbar-lewagon {
-  justify-content: space-between;
   background: white;
 }
 
@@ -21,4 +20,8 @@
 
 #navbarDropdown {
   margin-left: 20px;
+}
+
+.navbar > .container-fluid {
+  margin: 0 0.5rem;
 }
