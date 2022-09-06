@@ -7,10 +7,11 @@
     <div class='text-left'>
       <div class="form-inputs">
         <%= f.input :answers, as: :hidden, input_html: { value: answers } %>
+        <%= f.input :personality_id, as: :hidden, input_html: { value: personality.id } %>
         <%= f.input :username,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "username" }%>
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "username" }%>
         <%= f.input :email,
                     required: true,
                     autofocus: true,
