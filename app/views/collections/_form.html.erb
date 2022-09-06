@@ -3,7 +3,7 @@
               placeholder: 'Collection Name',
               required: true,
               minlength: 1 %>
-  <%= f.input :photo, as: :file %>
+  <%= f.input :photo, as: :file, hint: 'This image will be shared with other users.' %>
   <%= hidden_field_tag 'bottle', @bottle %>
   <%= f.button :submit, class: "btn btn-warning" %>
 <% end %>
