@@ -38,4 +38,7 @@ Rails.application.routes.draw do
   end
 
   resources :collection_wines, only: %i[destroy]
+
+  resources :bookmarks, only: %i[new create index destroy show]
+
 end
