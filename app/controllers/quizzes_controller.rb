@@ -93,7 +93,7 @@ class QuizzesController < ApplicationController
     end
 
     # assign personality type
-    if points >= 1 && points <= 4
+    if points >= 0 && points <= 4
       personality_type = 6 # Conservator
     elsif points >= 5 && points <= 8
       personality_type = 3 # Connoisseur
