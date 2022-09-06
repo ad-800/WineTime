@@ -12,17 +12,8 @@ class QuizzesController < ApplicationController
     redirect_to result_quizzes_path
   end
 
-  # def recommend_wine
-  #   # for now the recommended wines are randomly chosen
-  #   @wines = Wine.all
-  #   @recommend_one = Wine.order('RANDOM()').first
-  #   @recommend_two = Wine.order('RANDOM()').last
-  # end
-
   def personality
     @wines = Wine.all
-    # @personalities = Personality.all
-    # @personality = Personality.order('RANDOM()').first
     @personality = Personality.find_by(personality_type: personality_by_answers)
     @wine_by_personality = []
     @personality.wines[0..2].each do |wine|
