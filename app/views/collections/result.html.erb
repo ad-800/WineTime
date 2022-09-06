@@ -4,7 +4,7 @@
 
     <div class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3">
       <% @collections.each do |collection| %>
-        <div class="box-collection box-result mb-5 p-5" style="background-image: linear-gradient(rgb(40, 49, 59, 0.2), rgba(72, 84, 97, 0.2)), url('<%=cl_image_path(collection.photo.key, :width=>0.2, :crop=>"scale") %>')">
+        <div class="box-collection box-result mb-5 p-5" style="background-image: linear-gradient(rgba(40, 49, 59, 0.2), rgba(72, 84, 97, 0.2)), url('<%=cl_image_path(collection.photo.key, :width=>0.2, :crop=>"scale") %>')">
           <h4><%= collection.title %> by <%= collection.user.username %></h4>
           <%= link_to "See collection", user_collection_path(collection.user, collection), class:'link-collections' %>
         </div>
