@@ -3,15 +3,19 @@
 <% else %>
   <h1 class="mb-3"><%= @user.username.capitalize %>'s <%= @collection.title %></h1>
 <% end %>
-  <div class="sharethis-inline-share-buttons"></div>
-<br>
 <div>
   <% if @wines.empty? %>
     <p>No wines in collection</p>
     <%= image_tag 'search_again.png', class: 'search-img' %>
   <% else %>
-  <% @recommended = @wines %>
-  <%= render 'shared/recommendations', collections: @collections %>
+    <div>
+      <span><a style="padding-right: 10px" href="http://www.facebook.com/share.php?u=http://www.wine-time.me/users/<%= @user.id %>/collections/<%= @collection.id %>" target="_blank"><i class="fa-brands fa-square-facebook fa-xl"></i></a></span>
+      <span><a style="padding-right: 10px" href="https://twitter.com/intent/tweet?text=http://www.wine-time.me/users/<%= @user.id %>/collections/<%= @collection.id %>" target="_blank"><i class="fa-brands fa-square-twitter fa-xl"></i></a></span>
+      <span><a style="padding-right: 10px" href="https://wa.me/?text=http://www.wine-time.me/users/<%= @user.id %>/collections/<%= @collection.id %>" target="_blank"><i class="fa-brands fa-square-whatsapp fa-xl"></i></a></span>
+    </div>
+    <br><br>
+    <% @recommended = @wines %>
+    <%= render 'shared/recommendations', collections: @collections %>
   <% end %>
 </div>
 <% if @user.id != current_user.id %>
