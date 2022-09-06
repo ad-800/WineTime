@@ -41,19 +41,21 @@
           <button type="button" class="btn btn-outline-warning">Buy</button>
         </a>
         <% if !@collections.nil? %>
-          <% if @collections.size > 0 && @remove.nil? %>
+          <% if @collections.size > 0 && @remove.nil? || current_user.id != @collection.user_id%>
             <div class="dropdown">
               <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Add to Collection
               </button>
               <ul class="dropdown-menu dropdown-menu-dark">
                 <% @collections.each do |collection| %>
-                  <li>
-                    <%= simple_form_for :collection, url: add_wine_collection_path(collection) do |f| %>
-                      <%= f.input :wine, as: :hidden, input_html: { value: wine.id } %>
-                      <%= f.submit collection.title, class: "dropdown-item" %>
+                  <% if collection.user_id == current_user.id %>
+                    <li>
+                      <%= simple_form_for :collection, url: add_wine_collection_path(collection) do |f| %>
+                        <%= f.input :wine, as: :hidden, input_html: { value: wine.id } %>
+                        <%= f.submit collection.title, class: "dropdown-item" %>
+                      <% end %>
+                    </li>
                     <% end %>
-                  </li>
                 <% end %>
               </ul>
             </div>
@@ -69,3 +71,4 @@
     </div>
   </div>
 </div>
+<%# raise %>
