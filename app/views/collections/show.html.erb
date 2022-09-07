@@ -2,7 +2,7 @@
   <h2><u>Your Collection</u></h2>
   <h1 class="mb-3"><%= @collection.title %></h1>
 <% else %>
-  <h2><%= @user.username.capitalize %>'s</h2>
+  <h2><%= @user.username.titleize %>'s</h2>
   <h1 class="mb-3"><%= @collection.title %> Collection</h1>
 <% end %>
 <div>
