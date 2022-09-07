@@ -6,7 +6,8 @@ class CollectionsController < ApplicationController
   end
 
   def show
-    @remove = true
+    # @remove = true
+    @remove = params[:remove]
     @collections = Collection.all
     @collection = Collection.find(params[:id])
     @wines = @collection.wines
