@@ -1,10 +1,9 @@
 <div class="container-lg">
   <% if @search == true || @search == false %>
     <h1 class='mb-5'>Collections Found</h1>
-
     <div class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3">
       <% @collections.each do |collection| %>
-        <div class="box-collection box-result mb-5 p-5" style="background-image: linear-gradient(rgba(40, 49, 59, 0.2), rgba(72, 84, 97, 0.2)), url('<%=cl_image_path(collection.photo.key, :width=>0.2, :crop=>"fill", :alt=>"image of collection") %>')">
+        <div class="box-collection mb-3 p-5" style="background-image: linear-gradient(rgba(40, 49, 59, 0.2), rgba(72, 84, 97, 0.2)), url('<%=cl_image_path(collection.photo.key, :crop=>"fill", :alt=>"image of collection") %>')">
           <h4 class="title-shadow"><%= collection.title %> by <%= collection.user.username %></h4>
           <%= link_to "See Collection", user_collection_path(collection.user, collection), class:'link-collections' %>
         </div>
