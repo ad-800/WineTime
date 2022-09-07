@@ -6,7 +6,6 @@ class CollectionsController < ApplicationController
   end
 
   def show
-    # @remove = true
     @remove = params[:remove]
     @collections = Collection.all
     @collection = Collection.find(params[:id])
@@ -42,10 +41,15 @@ class CollectionsController < ApplicationController
   end
 
   def destroy
-    Bookmark.where(collection_id: @collection).destroy_all
-    # @collection.wines.destroy_all
+    if Bookmark.where(collection_id: @collection).count.positive?
+      influencer
+    end
     @collection.destroy
     redirect_to me_profiles_path
+  end
+
+  def influencer
+    Bookmark.where(collection_id: @collection).destroy_all
   end
 
   def add_wine
