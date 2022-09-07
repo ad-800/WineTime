@@ -42,7 +42,8 @@ class CollectionsController < ApplicationController
   end
 
   def destroy
-    @collection.wines.destroy_all
+    Bookmark.where(collection_id: @collection).destroy_all
+    # @collection.wines.destroy_all
     @collection.destroy
     redirect_to me_profiles_path
   end
