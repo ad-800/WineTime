@@ -43,7 +43,7 @@
         <%= link_to '<i class="fa-solid fa-plus"></i>&nbsp;Create Collection'.html_safe, new_collection_path, class:"list",
         style: "text-decoration: none; color: white; background-color: black;"%>
       </div>
-      <h2 class="mb-3">Bookmarked Collections</h2>
+      <h2 class="mb-3 mt-4">Bookmarked Collections</h2>
       <div class="my-collection gap-3 mb-3">
       <% if @bookmarks.size > 0 %>
         <% @bookmarks.each do |bookmark| %>
@@ -62,7 +62,7 @@
     </div>
 
     <div class="col-sm-12 col-md-6">
-      <h2>Recommendations</h2>
+      <h2 class="mb-4">Recommendations</h2>
       <%= render 'shared/recommendations', collections: @collections %>
     </div>
   </div>
