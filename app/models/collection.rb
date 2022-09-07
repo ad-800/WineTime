@@ -3,7 +3,7 @@ class Collection < ApplicationRecord
   has_many :collection_wines, dependent: :destroy
   has_many :wines, through: :collection_wines
   has_one_attached :photo
-  validates :title, :photo, presence: true
+  validates :title, presence: true
 
   include PgSearch::Model
 
