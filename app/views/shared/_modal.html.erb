@@ -11,7 +11,7 @@
               <%= cl_image_tag wine.photo.key, class: "responsive wine-show mb-4" %>
             </div>
             <div class="col-sm-12 col-md-8">
-              <h2 class='text-left mb-4'><%= wine.name %></h2>
+              <h2 class='text-left mb-4' style="max-width: 550px;"><%= wine.name %></h2>
               <div class="show-grid">
                 <div class='show-specs'><%= image_tag "rating.png", class:'show-img' %><p><strong>Rating:</strong> <%= wine.rating %></p></div>
                 <div class='show-specs'><%= image_tag "location.png", class:'show-img' %><p><strong>Country:</strong> <%= wine.country %></p></div>
