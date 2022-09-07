@@ -49,7 +49,7 @@ class CollectionsController < ApplicationController
   def add_wine
     @bottle = CollectionWine.new(collection_id: params[:id], wine_id: params[:collection][:wine])
     @bottle.save
-    redirect_to me_profiles_path(current_user)
+    redirect_to user_collection_path(user_id: current_user)
   end
 
   def result
