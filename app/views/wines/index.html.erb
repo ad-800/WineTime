@@ -1,9 +1,8 @@
 <div class="container">
-  <h2>Results</h2>
+  <h1 class="mb-3">Results</h1>
   <div class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3">
     <% @wines.each do |wine| %>
       <div class="search-card mb-4">
-        <!-- <h4><%= wine.name %></h4> -->
         <p><%= cl_image_tag wine.photo.key, class: 'responsive' %></p>
         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#wine-<%= wine.id %>">
           More Information
