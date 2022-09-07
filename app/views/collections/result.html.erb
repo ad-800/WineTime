@@ -7,7 +7,7 @@
         <% if collection.photo.key %>
           <div class="box-collection mb-3 p-5" style="background-image: linear-gradient(rgba(40, 49, 59, 0.2), rgba(72, 84, 97, 0.2)), url('<%=cl_image_path(collection.photo.key, :crop=>"fill", :alt=>"image of collection") %>')">
         <% else %>
-          <div class="box-collection mb-3 p-5" style="background-color: #993474;">
+          <div class="box-collection mb-3 p-5" style="background-color: #8D3B72;">
         <% end %>
           <h4 class="title-shadow"><%= collection.title %> by <%= collection.user.username %></h4>
         </div>
