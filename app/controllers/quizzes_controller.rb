@@ -30,7 +30,6 @@ class QuizzesController < ApplicationController
 
     # get the answers and calculate the points
     @answers.each_with_index do | answer, index |
-      puts answer
       case index
       when 0
         case answer[0]
