@@ -8,9 +8,12 @@
 require "open-uri"
 
 puts "Cleaning database..."
+Bookmark.destroy_all
+User.destroy_all
 CollectionWine.destroy_all
 Wine.destroy_all
 Personality.destroy_all
+
 
 puts "Creating 10 wines"
 
