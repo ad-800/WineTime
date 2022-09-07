@@ -20,22 +20,22 @@
         </div>
         <div class="carousel-inner content d-flex align-items-center">
           <div class="carousel-item active radio-margin">
-            <%= f.input :I_wake_up_in_the_morning_and_drink, as: :radio_buttons, collection: ['Coffee with sugar', 'Coffee and no sugar', 'Tea', 'Milk', 'Nothing'], wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} }  %>
+            <%= f.input :I_wake_up_in_the_morning_and_drink, as: :radio_buttons, collection: [['0', 'Coffee with sugar'], ['1', 'Coffee and no sugar'], ['2', 'Tea'], ['3', 'Milk'], ['4', 'Nothing']], label_method: :second, value_method: :first, wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} }  %>
           </div>
           <div class="carousel-item radio-margin">
-            <%= f.input :my_favorite_fruits_are, as: :radio_buttons, collection: ['Citrus only', 'Refreshing', 'Wild berries', 'Bleahhh'], wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} } %>
+            <%= f.input :my_favorite_fruits_are, as: :radio_buttons, collection: [['0', 'Citrus only'], ['1', 'Refreshing'], ['2', 'Wild berries'], ['3', 'Bleahhh']], label_method: :second, value_method: :first, wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} } %>
           </div>
           <div class="carousel-item radio-margin">
-            <%= f.input :you_put_salt, as: :radio_buttons, collection: ['On everything!', 'Not at all', 'A bit'], wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} } %>
+            <%= f.input :you_put_salt, as: :radio_buttons, collection: [['0', 'On everything!'], ['1', 'Not at all'], ['2', 'A bit']], label_method: :second, value_method: :first, wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} } %>
           </div>
           <div class="carousel-item radio-margin">
-            <%= f.input :my_friends_call_me, as: :radio_buttons, collection: ['Adventureous', 'Traditional', 'Naughty'], wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} } %>
+            <%= f.input :my_friends_call_me, as: :radio_buttons, collection: [['0', 'Adventureous'], ['1', 'Traditional'], ['2', 'Naughty']], label_method: :second, value_method: :first, wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} } %>
           </div>
           <div class="carousel-item radio-margin">
-            <%= f.input :pasta_or_pizza_topping, as: :radio_buttons, collection: ['Hotttt spicyyyyy', 'Truffle or mushrooms', 'Vegetables', 'Cheesy'], wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} } %>
+            <%= f.input :pasta_or_pizza_topping, as: :radio_buttons, collection: [['0', 'Hotttt spicyyyyy'], ['1', 'Truffle or mushrooms'], ['2', 'Vegetables'], ['3', 'Cheesy']], label_method: :second, value_method: :first, wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} } %>
           </div>
           <div class="carousel-item radio-margin">
-            <%= f.input :i_like_to_drink, as: :radio_buttons, collection: ['Aperitivos', 'At special events', 'Dinner with friends', "All the time, doesn't really matter"], wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} } %>
+            <%= f.input :i_like_to_drink, as: :radio_buttons, collection: [['0', 'Aperitivos'], ['1', 'At special events'], ['2', 'Dinner with friends'], ['3', "All the time, doesn't really matter"]], label_method: :second, value_method: :first, wrapper_html: { data: {form_target: "question"} }, input_html: { data: {action: "change->form#validate"} } %>
           </div>
         </div>
         <br>

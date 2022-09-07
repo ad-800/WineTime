@@ -30,61 +30,62 @@ class QuizzesController < ApplicationController
 
     # get the answers and calculate the points
     @answers.each_with_index do | answer, index |
+      puts answer
       case index
       when 0
         case answer[0]
-        when 'a'
+        when '0'
           points += 5
-        when 'b'
+        when '1'
           points += 1
-        when 'c'
+        when '2'
           points += 3
-        when 'd'
+        when '3'
           points += 2
         end
       when 1
         case answer[0]
-        when 'a'
+        when '0'
           points += 1
-        when 'b'
+        when '1'
           points += 5
-        when 'd'
+        when '3'
           points += 2
         end
       when 2
         case answer[0]
-        when 'a'
+        when '0'
           points += 5
-        when 'c'
+        when '2'
           points += 3
         end
       when 3
         case answer[0]
-        when 'a'
+        when '0'
           points += 5
-        when 'b'
+        when '1'
           points += 2
         end
       when 4
         case answer[0]
-        when 'a'
+        when '0'
           points += 5
-        when 'b'
+        when '1'
           points += 4
-        when 'c'
+        when '2'
           points += 3
-        when 'd'
+        when '3'
           points += 1
         end
       when 5
         case answer[0]
-        when 'a'
+        when '0'
           points += 3
-        when 'b'
+        when '1'
           points += 1
-        when 'c'
+        when '2'
           points += 4
-        when 'd'
+        when '3'
           points += 5
         end
       else
