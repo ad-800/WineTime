@@ -1,7 +1,9 @@
 <% if @user.id == current_user.id %>
-  <h1 class="mb-3">Your Collection: <%= @collection.title %></h1>
+  <h2><u>Your Collection</u></h2>
+  <h1 class="mb-3"><%= @collection.title %></h1>
 <% else %>
-  <h1 class="mb-3"><%= @user.username.capitalize %>'s <%= @collection.title %></h1>
+  <h2><%= @user.username.capitalize %>'s</h2>
+  <h1 class="mb-3"><%= @collection.title %> Collection</h1>
 <% end %>
 <div>
   <% if @wines.empty? %>
