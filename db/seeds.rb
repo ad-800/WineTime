@@ -14,8 +14,7 @@ CollectionWine.destroy_all
 Wine.destroy_all
 Personality.destroy_all
 
-
-puts "Creating 10 wines"
+puts "Creating Wines"
 
 #1
 
@@ -287,10 +286,6 @@ new_wine = Wine.new(parameters)
 new_wine.photo.attach(io: file, filename: "friuli.png", content_type: "png")
 new_wine.save
 
-puts "Finished planting"
-
-puts "Creating João's 10 seeds"
-
 # Joao 1
 
 parameters = {
@@ -561,7 +556,493 @@ new_wine = Wine.new(parameters)
 new_wine.photo.attach(io: file, filename: "reserveimperial.png", content_type: "png")
 new_wine.save
 
-puts "Finished planting Joao's seeds"
+# 21
+
+parameters = {
+  name: 'Chablis "Les Grands Terroirs" 2020 - Samuel Billaud',
+  description: 'Wonderful with crustaceans, Fish-based main dishes, Fish-based pasta or rice dishes.',
+  price: 24.50,
+  rating: 92,
+  country: 'France',
+  region: 'Burgundy',
+  color: 'White',
+  wine_type: 'Dinner with friends.',
+  bitter: 5,
+  fruit: 8,
+  mineral: 5,
+  spice: 3,
+  earth: 3,
+  wine_unique_id: 21,
+  url: 'https://www.tannico.it/en/chablis-les-grands-terroirs-2020-samuel-billaud.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662541102/sxubbdjzikh8znazsjez.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "chablis.png", content_type: "png")
+new_wine.save
+
+# 22
+
+parameters = {
+  name: 'Pinot Noir "Les Côtilles" 2021 - Famille Roux',
+  description: 'Tasty with main dishes featuring white meats, Meat or mushroom-based pasta or rice dishes, Meat-based pasta or rice dishes.',
+  price: 10.50,
+  rating: 92,
+  country: 'France',
+  region: 'Burgundy',
+  color: 'Red',
+  wine_type: 'Lunch with family.',
+  bitter: 6,
+  fruit: 8,
+  mineral: 6,
+  spice: 5,
+  earth: 5,
+  wine_unique_id: 22,
+  url: 'https://www.tannico.it/en/pinot-noir-les-cotilles-2021-famille-roux.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662541325/htcndyf7vcilxlpcopq7.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "pinotnoirroux.png", content_type: "png")
+new_wine.save
+
+# 23
+
+parameters = {
+  name: 'Marsannay Rouge 2019 - Louis Latour',
+  description: 'Yummy with main dishes featuring red meat, Main dishes featuring white meats.',
+  price: 32.50,
+  rating: 81,
+  country: 'France',
+  region: 'Burgundy',
+  color: 'Red',
+  wine_type: 'Lunch with family.',
+  bitter: 5,
+  fruit: 9,
+  mineral: 5,
+  spice: 5,
+  earth: 5,
+  wine_unique_id: 23,
+  url: 'https://www.tannico.it/en/marsannay-rouge-2019-louis-latour.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662541663/ttvu8g8ozqxlrjcaq8j9.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "marsannay.png", content_type: "png")
+new_wine.save
+
+# 24
+
+parameters = {
+  name: 'Vin de France Rouge "Le Vallon" 2020 - Domaine Milan',
+  description: 'To combine with main dishes featuring red meat, Poultry.',
+  price: 26.00,
+  rating: 80,
+  country: 'France',
+  region: 'Provenza',
+  color: 'Red',
+  wine_type: 'Dinner with friends.',
+  bitter: 7,
+  fruit: 9,
+  mineral: 7,
+  spice: 8,
+  earth: 6,
+  wine_unique_id: 24,
+  url: 'https://www.tannico.it/en/vin-de-france-rouge-le-vallon-2020-domaine-milan.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662541878/g8pbnlm5ozgr6kfoznd7.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "francerouge.png", content_type: "png")
+new_wine.save
+
+# 25
+
+parameters = {
+  name: 'Côtes de Provence "Etoile" 2021 - Maison Mirabeau',
+  description: 'Flavorful with fish-based appetizers, Fish-based main dishes, Fish-based pasta or rice dishes, Vegetarian dishes.',
+  price: 23.30,
+  rating: 90,
+  country: 'France',
+  region: 'Provenza',
+  color: 'Rose',
+  wine_type: 'Informal occasions.',
+  bitter: 7,
+  fruit: 7,
+  mineral: 8,
+  spice: 8,
+  earth: 5,
+  wine_unique_id: 25,
+  url: 'https://www.tannico.it/en/catalog/product/view/id/113250/s/cotes-de-provence-etoile-2021-maison-mirabeau/'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662542072/ehgmt7pvwtmgpmwcxd1k.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "cotesmaisonmirabeau.png", content_type: "png")
+new_wine.save
+
+# 26
+
+parameters = {
+  name: 'Côteaux du Verdon Rouge IGP “La fin du bal” 2019 - Myrko Tépus',
+  description: 'Enjoy it with meat-based appetizers, Salumi.',
+  price: 30.00,
+  rating: 89,
+  country: 'France',
+  region: 'Provenza',
+  color: 'Red',
+  wine_type: 'Appetizer.',
+  bitter: 7,
+  fruit: 7,
+  mineral: 7,
+  spice: 7,
+  earth: 6,
+  wine_unique_id: 26,
+  url: 'https://www.tannico.it/en/coteaux-du-verdon-rouge-igp-la-fin-du-bal-2019-myrko-tepus.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662542356/nh1hptnemae2r5v2gw8i.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "verdonrouge.png", content_type: "png")
+new_wine.save
+
+# 27
+
+parameters = {
+  name: 'Vermentino di Sardegna DOC "Primo Bianco" 2021 - Cantina Mesa',
+  description: 'Lovely with fish-based appetizers, Fish-based main dishes, Fish-based pasta or rice dishes.',
+  price: 8.00,
+  rating: 84,
+  country: 'Italy',
+  region: 'Sardinia',
+  color: 'White',
+  wine_type: 'Light lunches.',
+  bitter: 6,
+  fruit: 2,
+  mineral: 5,
+  spice: 4,
+  earth: 5,
+  wine_unique_id: 27,
+  url: 'https://www.tannico.it/en/vermentino-di-sardegna-doc-primo-bianco-2021-cantina-mesa.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662542750/e1rjogin2kjtb6so2yqy.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "vermentinosardegna.png", content_type: "png")
+new_wine.save
+
+# 28
+
+parameters = {
+  name: 'Alta Langa Brut DOCG Limited Edition - Fontanafredda',
+  description: 'Lovely with fish-based appetizers, Fish-based main dishes, Fish-based pasta or rice dishes.',
+  price: 17.90,
+  rating: 91,
+  country: 'Italy',
+  region: 'Piemonte',
+  color: 'Champagne and Sparkling',
+  wine_type: 'Asian dinners.',
+  bitter: 6,
+  fruit: 3,
+  mineral: 4,
+  spice: 4,
+  earth: 5,
+  wine_unique_id: 28,
+  url: 'https://www.tannico.it/en/alta-langa-brut-docg-limited-edition-fontanafredda.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662542963/hd3rypvgto2ui11c1ruw.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "altalanga.png", content_type: "png")
+new_wine.save
+
+# 29
+
+parameters = {
+  name: 'Orvieto Classico DOC "Collezione Oro" 2020 - Piccini',
+  description: 'Delicious with fish-based appetizers, Meat or mushroom-based appetizers, Quiches and meat pies, Vegetarian dishes.',
+  price: 6.30,
+  rating: 88,
+  country: 'Italy',
+  region: 'Umbria',
+  color: 'White',
+  wine_type: 'Dinner with friends.',
+  bitter: 7,
+  fruit: 2,
+  mineral: 5,
+  spice: 3,
+  earth: 5,
+  wine_unique_id: 29,
+  url: 'https://www.tannico.it/en/orvieto-classico-doc-collezione-oro-2020-piccini.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662543159/g8ngdpphqhnnxjqplmqp.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "orvietoclassico.png", content_type: "png")
+new_wine.save
+
+# 30
+
+parameters = {
+  name: 'Lazio Syrah IGP “Tellus” 2019 - Falesco',
+  description: 'Super with meat or mushroom-based main dishes, Meat or mushroom-based pasta or rice dishes.',
+  price: 9.50,
+  rating: 89,
+  country: 'Italy',
+  region: 'Lazio',
+  color: 'Red',
+  wine_type: 'Dinner with friends.',
+  bitter: 3,
+  fruit: 9,
+  mineral: 5,
+  spice: 7,
+  earth: 2,
+  wine_unique_id: 30,
+  url: 'https://www.tannico.it/en/lazio-syrah-igp-tellus-2019-falesco.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662543544/xezvutx1wnbaqebqwtqs.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "laziosyrah.png", content_type: "png")
+new_wine.save
+
+# 31
+
+parameters = {
+  name: 'Puglia Rosato IGT 2021 - Polvanera',
+  description: 'Top with fish-based appetizers, Pizza, Salumi.',
+  price: 9.90,
+  rating: 83,
+  country: 'Italy',
+  region: 'Apulia',
+  color: 'Rose',
+  wine_type: 'Appetizer, Dinner with friends.',
+  bitter: 5,
+  fruit: 7,
+  mineral: 8,
+  spice: 6,
+  earth: 1,
+  wine_unique_id: 31,
+  url: 'https://www.tannico.it/en/puglia-rosato-igt-2021-polvanera.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662543774/gqpj2lsubhiu5epudhdf.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "pugliarosato.png", content_type: "png")
+new_wine.save
+
+# 32
+
+parameters = {
+  name: 'Lambrusco di Sorbara "Premium" 2021 - Cleto Chiarli',
+  description: 'Perfectly combines with meat or mushroom-based appetizers, Meat or mushroom-based pasta or rice dishes.',
+  price: 9.30,
+  rating: 96,
+  country: 'Italy',
+  region: 'Emilia Romagna',
+  color: 'Red',
+  wine_type: 'Celebrating special occasions.',
+  bitter: 3,
+  fruit: 9,
+  mineral: 5,
+  spice: 7,
+  earth: 1,
+  wine_unique_id: 32,
+  url: 'https://www.tannico.it/en/lambrusco-di-sorbara-premium-2021-cleto-chiarli.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662543935/cjqdwqhshuehq2kamtyv.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "lambruscodisorbara.png", content_type: "png")
+new_wine.save
+
+# 33
+
+parameters = {
+  name: 'Ottocento Bianco 2017 - Giorgio Clai',
+  description: 'Amazing with main dishes featuring red meat.',
+  price: 37.50,
+  rating: 90,
+  country: 'Croatia',
+  region: 'Istria',
+  color: 'White',
+  wine_type: 'Formal dinners.',
+  bitter: 4,
+  fruit: 4,
+  mineral: 7,
+  spice: 5,
+  earth: 4,
+  wine_unique_id: 33,
+  url: 'https://www.tannico.it/en/ottocento-bianco-2017-giorgio-clai.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662544327/n6ik58o8f9mpz4qc7vpg.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "ottocentocroatia.png", content_type: "png")
+new_wine.save
+
+# 34
+
+parameters = {
+  name: 'Tawny Port 10 years - Fonseca Porto',
+  description: 'Great with desserts, Cheese, Chocolate.',
+  price: 43.60,
+  rating: 93,
+  country: 'Portugal',
+  region: 'Porto',
+  color: 'Red',
+  wine_type: 'After-dinner wine.',
+  bitter: 4,
+  fruit: 7,
+  mineral: 4,
+  spice: 4,
+  earth: 4,
+  wine_unique_id: 34,
+  url: 'https://www.tannico.it/en/tawny-port-10-years-fonseca-porto.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662544511/k83lxb42pnwojvk9etgt.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "tawnyport.png", content_type: "png")
+new_wine.save
+
+# 35
+
+parameters = {
+  name: 'Contessa Entellina Chardonnay DOC "Chiarandà" 2019 - Donnafugata',
+  description: 'Incredible with fish-based main dishes, Fish-based pasta or rice dishes.',
+  price: 29.90,
+  rating: 89,
+  country: 'Italy',
+  region: 'Sicily',
+  color: 'White',
+  wine_type: 'Everyday wine.',
+  bitter: 6,
+  fruit: 6,
+  mineral: 6,
+  spice: 6,
+  earth: 5,
+  wine_unique_id: 35,
+  url: 'https://www.tannico.it/en/contessa-entellina-chardonnay-doc-chiaranda-2019-donnafugata.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662544660/xvdrlx4aeygfm4tu1gss.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "contessaentellina.png", content_type: "png")
+new_wine.save
+
+# 36
+
+parameters = {
+  name: '"We Love Pét Nat" Rosé 2020 - Weingut Weszeli',
+  description: 'Extraordinary with sushi.',
+  price: 17.50,
+  rating: 90,
+  country: 'Austria',
+  region: 'Langenlois',
+  color: 'Champagne and Sparkling',
+  wine_type: 'Appetizer, Informal occasions.',
+  bitter: 7,
+  fruit: 3,
+  mineral: 7,
+  spice: 3,
+  earth: 1,
+  wine_unique_id: 36,
+  url: 'https://www.tannico.it/en/we-love-pet-nat-rose-2020-weingut-weszeli.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662546228/ruzc758wwehneqw3223x.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "welovepetnat.png", content_type: "png")
+new_wine.save
+
+# 37
+
+parameters = {
+  name: 'Campania Rosato IGT "Visione" 2021 - Feudi di San Gregorio',
+  description: 'Matches perfectly with fish-based appetizers, Fish-based main dishes, Fish-based pasta or rice dishes, Pizza, Salumi.',
+  price: 29.90,
+  rating: 89,
+  country: 'Italy',
+  region: 'Campania',
+  color: 'Rose',
+  wine_type: 'Summer dinners.',
+  bitter: 7,
+  fruit: 3,
+  mineral: 6,
+  spice: 3,
+  earth: 1,
+  wine_unique_id: 37,
+  url: 'https://www.tannico.it/en/campania-rosato-igt-visione-2021-feudi-di-san-gregorio.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662547569/haqpapytftftjqdirdun.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "campaniarosato.png", content_type: "png")
+new_wine.save
+
+# 38
+
+parameters = {
+  name: 'Vin Rouge “Le Champs des Maures” 2019 - Les Chemins de Bassac',
+  description: 'Superb with main dishes featuring red meat, Main dishes featuring white meats, Poultry',
+  price: 13.50,
+  rating: 87,
+  country: 'Italy',
+  region: 'France',
+  color: 'Languedoc',
+  wine_type: 'Lunch with family.',
+  bitter: 7,
+  fruit: 2,
+  mineral: 7,
+  spice: 3,
+  earth: 4,
+  wine_unique_id: 38,
+  url: 'https://www.tannico.it/en/vin-rouge-le-champs-des-maures-2019-les-chemins-de-bassac.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662547787/tmaycwfzutdkvkgey8tz.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "bassac.png", content_type: "png")
+new_wine.save
+
+puts "Finished planting"
 
 puts "Creating Personalities"
 
