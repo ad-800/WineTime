@@ -22,6 +22,6 @@
 </div>
 
 <div>
-  <h3>Recommendations</h3>
+  <h3 class="mb-4"><%= @user.username.titleize %>'s Recommendations</h3>
   <%= render 'shared/recommendations', collections: @collections %>
 </div>
