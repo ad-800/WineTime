@@ -1022,9 +1022,9 @@ parameters = {
   description: 'Superb with main dishes featuring red meat, Main dishes featuring white meats, Poultry',
   price: 13.50,
   rating: 87,
-  country: 'Italy',
-  region: 'France',
-  color: 'Languedoc',
+  country: 'France',
+  region: 'Languedoc',
+  color: 'Red',
   wine_type: 'Lunch with family.',
   bitter: 7,
   fruit: 2,
@@ -1040,6 +1040,330 @@ puts parameters[:name]
 file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662547787/tmaycwfzutdkvkgey8tz.png")
 new_wine = Wine.new(parameters)
 new_wine.photo.attach(io: file, filename: "bassac.png", content_type: "png")
+new_wine.save
+
+# 39
+
+parameters = {
+  name: 'Vino Rosso "Tranatt" - Cantina Urbana',
+  description: 'Ideal with main dishes featuring red meat, Meat-based pasta or rice dishes',
+  price: 10.90,
+  rating: 88,
+  country: 'Italy',
+  region: 'Lombardia',
+  color: 'Red',
+  wine_type: 'Informal occasions.',
+  bitter: 7,
+  fruit: 5,
+  mineral: 5,
+  spice: 2,
+  earth: 5,
+  wine_unique_id: 39,
+  url: 'https://www.tannico.it/en/vino-rosso-tranatt-cantina-urbana.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662630186/robj0dlhqggbdgmm6cjt.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "cantinaurbana.png", content_type: "png")
+new_wine.save
+
+# 40
+
+parameters = {
+  name: 'Chianti Classico DOCG "Casa di Colombo" 2017 - Tenuta La Novella',
+  description: 'Ideal with main dishes featuring red meat, Main dishes featuring white meats, Meat-based pasta or rice dishes.',
+  price: 19.90,
+  rating: 83,
+  country: 'Italy',
+  region: 'Tuscany',
+  color: 'Red',
+  wine_type: 'Lunch with family.',
+  bitter: 3,
+  fruit: 8,
+  mineral: 5,
+  spice: 7,
+  earth: 3,
+  wine_unique_id: 40,
+  url: 'https://www.tannico.it/en/chianti-classico-docg-casa-di-colombo-2017-tenuta-la-novella.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662630622/ad3lbjalm8fkya8eb3zr.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "casadicolombo.png", content_type: "png")
+new_wine.save
+
+# 41
+
+parameters = {
+  name: 'Vino Bianco "Ringhio Orange" - Cantina Urbana',
+  description: 'Recommended with fish-based main dishes, Main dishes featuring white meats, Vegetarian dishes.',
+  price: 18.90,
+  rating: 88,
+  country: 'Italy',
+  region: 'Lombardia',
+  color: 'Orange Wine',
+  wine_type: 'Informal occasions.',
+  bitter: 5,
+  fruit: 7,
+  mineral: 7,
+  spice: 4,
+  earth: 4,
+  wine_unique_id: 41,
+  url: 'https://www.tannico.it/en/vino-bianco-ringhio-orange-cantina-urbana.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662630827/yhqoh4brmyt2gravzfpd.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "ringhiorange.png", content_type: "png")
+new_wine.save
+
+# 42
+
+parameters = {
+  name: 'Verdicchio dei Castelli di Jesi Classico Superiore DOC "Ergo" 2019 - Mirizzi',
+  description: 'The perfect accompaniment to fish-based main dishes, Main dishes featuring white meats, Spicy or fragrant dishes.',
+  price: 29.50,
+  rating: 81,
+  country: 'Italy',
+  region: 'Marche',
+  color: 'White',
+  wine_type: 'An evening amongst connoisseurs.',
+  bitter: 7,
+  fruit: 2,
+  mineral: 5,
+  spice: 3,
+  earth: 5,
+  wine_unique_id: 42,
+  url: 'https://www.tannico.it/en/verdicchio-dei-castelli-di-jesi-classico-superiore-doc-ergo-2019-mirizzi.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662631050/aapho6yzy3znygghnmlq.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "jesiclassicosup.png", content_type: "png")
+new_wine.save
+
+# 43
+
+parameters = {
+  name: 'Napa Valley "Bettina" 2018 - Bryant Estate',
+  description: 'Optimal with main dishes featuring red meat.',
+  price: 720.00,
+  rating: 98,
+  country: 'California',
+  region: 'Napa Valley',
+  color: 'Red',
+  wine_type: 'An evening amongst connoisseurs.',
+  bitter: 6,
+  fruit: 3,
+  mineral: 3,
+  spice: 5,
+  earth: 9,
+  wine_unique_id: 43,
+  url: 'https://www.tannico.it/en/napa-valley-bettina-2018-bryant-estate.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662631261/si62dtouvozfjj8dzivb.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "napabettina.png", content_type: "png")
+new_wine.save
+
+# 44
+
+parameters = {
+  name: 'Brunello di Montalcino DOCG "Luce" 2016 - Frescobaldi',
+  description: 'Not to be missed with meat or mushroom-based main dishes.',
+  price: 110.00,
+  rating: 88,
+  country: 'Italy',
+  region: 'Tuscany',
+  color: 'Red',
+  wine_type: 'Romantic evenings.',
+  bitter: 7,
+  fruit: 7,
+  mineral: 4,
+  spice: 6,
+  earth: 7,
+  wine_unique_id: 44,
+  url: 'https://www.tannico.it/en/brunello-di-montalcino-docg-luce-2016-frescobaldi-94697.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662634341/pq5jvgzi3jrxnnsrxqgj.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "montalcinoluce.png", content_type: "png")
+new_wine.save
+
+# 45
+
+parameters = {
+  name: 'Alto Adige Pinot Nero IGP “Meczan” 2021 - Hofstätter',
+  description: 'Quite suitable with meat or mushroom-based main dishes.',
+  price: 14.90,
+  rating: 94,
+  country: 'Italy',
+  region: 'Alto Adige',
+  color: 'Red',
+  wine_type: 'Informal occasions.',
+  bitter: 4,
+  fruit: 6,
+  mineral: 6,
+  spice: 7,
+  earth: 7,
+  wine_unique_id: 45,
+  url: 'https://www.tannico.it/en/alto-adige-pinot-nero-igp-meczan-2021-hofstatter.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662634469/b1bbaamjrj2xucsedhqk.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "pinotneromeczan.png", content_type: "png")
+new_wine.save
+
+# 46
+
+parameters = {
+  name: 'Melissa Rosso DOC "Asylia" 2021 - Librandi',
+  description: 'Best with meat or mushroom-based main dishes, Meat or mushroom-based pasta or rice dishes.',
+  price: 6.50,
+  rating: 80,
+  country: 'Italy',
+  region: 'Calabria',
+  color: 'Red',
+  wine_type: 'Everyday wine.',
+  bitter: 3,
+  fruit: 6,
+  mineral: 6,
+  spice: 6,
+  earth: 2,
+  wine_unique_id: 46,
+  url: 'https://www.tannico.it/en/catalog/product/view/id/113717/s/melissa-rosso-doc-asylia-2021-librandi/'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662635129/ey2ccjarwp5oozy2ydyh.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "asyliadoc.png", content_type: "png")
+new_wine.save
+
+# 47
+
+parameters = {
+  name: 'Cirò Rosato DOC 2021 - Scala',
+  description: 'Highly recommended with meat or mushroom-based appetizers, Pizza, Quiches and meat pies, Salumi.',
+  price: 11.00,
+  rating: 89,
+  country: 'Italy',
+  region: 'Calabria',
+  color: 'Rose',
+  wine_type: 'Appetizer, Dinner with friends, Informal occasions.',
+  bitter: 7,
+  fruit: 8,
+  mineral: 6,
+  spice: 6,
+  earth: 3,
+  wine_unique_id: 47,
+  url: 'https://www.tannico.it/en/ciro-rosato-doc-2021-scala.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662635269/eem4dgxgiovelq1wzkuj.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "cirorosato.png", content_type: "png")
+new_wine.save
+
+# 48
+
+parameters = {
+  name: 'Biferno Rosso DOP "Ramitello" 2016 - Di Majo Norante',
+  description: 'Loved with main dishes featuring red meat, Main dishes featuring white meats.',
+  price: 12.10,
+  rating: 89,
+  country: 'Italy',
+  region: 'Molise',
+  color: 'Red',
+  wine_type: 'Dinner with friends.',
+  bitter: 1,
+  fruit: 9,
+  mineral: 8,
+  spice: 7,
+  earth: 5,
+  wine_unique_id: 48,
+  url: 'https://www.tannico.it/en/biferno-rosso-dop-ramitello-2016-di-majo-norante.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662636017/p2zwnzdbfpusfdizrzah.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "bifernorosso.png", content_type: "png")
+new_wine.save
+
+# 49
+
+parameters = {
+  name: 'Molise Rosso Riserva DOP "Don Luigi" 2017 - Di Majo Norante',
+  description: 'Recommended with fish-based main dishes, Main dishes featuring white meats, Vegetarian dishes.',
+  price: 30.80,
+  rating: 91,
+  country: 'Italy',
+  region: 'Molise',
+  color: 'Red',
+  wine_type: 'Dinner with friends.',
+  bitter: 6,
+  fruit: 6,
+  mineral: 6,
+  spice: 3,
+  earth: 3,
+  wine_unique_id: 49,
+  url: 'https://www.tannico.it/en/molise-rosso-riserva-dop-don-luigi-2017-di-majo-norante.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662636199/ngeemrfptwhfxs4ztrg4.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "donluigimolise.png", content_type: "png")
+new_wine.save
+
+# 50
+
+parameters = {
+  name: 'Alghero Spumante Torbato DOC Brut - Sella & Mosca',
+  description: 'Just perfect with fish-based appetizers, Meat or mushroom-based appetizers.',
+  price: 10.50,
+  rating: 85,
+  country: 'Italy',
+  region: 'Sardinia',
+  color: 'Champagne and Sparkling',
+  wine_type: 'Appetizer.',
+  bitter: 3,
+  fruit: 6,
+  mineral: 8,
+  spice: 6,
+  earth: 1,
+  wine_unique_id: 50,
+  url: 'https://www.tannico.it/en/alghero-spumante-torbato-doc-brut-sella-mosca.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662636372/gi5tinzmurcrlwayaleu.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "algherospumante.png", content_type: "png")
 new_wine.save
 
 puts "Finished planting"
