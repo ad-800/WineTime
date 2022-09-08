@@ -3,17 +3,13 @@ class ProfilesController < ApplicationController
 
   def me
     @collections = Collection.where(user: current_user)
-    recommend_wine
+    @recommended = wines_by_personality_type(current_user)
     @bookmarks = Bookmark.where(user: current_user)
   end
 
   def show
     @collections = Collection.where(user: @user)
-    recommend_wine
-  end
-
-  def recommend_wine
-    @recommended = wines_by_personality_type
+    @recommended = wines_by_personality_type(@user)
   end
 
   private
@@ -22,9 +18,9 @@ class ProfilesController < ApplicationController
     @user = User.find_by(username: params[:id])
   end
 
-  def wines_by_personality_type
+  def wines_by_personality_type(user)
     # get the personality type
-    personality_type = current_user.personality.personality_type
+    personality_type = user.personality.personality_type
 
     case personality_type
     when 1 # Stoic
