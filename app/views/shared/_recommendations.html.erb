@@ -12,11 +12,12 @@
     <% @recommended.each do |wine| %>
     <div class="carousel-item <%= "active" if wine.name == @recommended[0].name %>">
       <div class="d-block w-100">
-        <%= cl_image_tag wine.photo.key, class: "responsive" %>
+        <%= cl_image_tag wine.photo.key, class: "responsive more-info-margin" %>
       </div>
+      <br>
       <div class="carousel-caption">
         <div class="wine-title-info">
-          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#wine-<%= wine.id %>">More Information</button>
+          <button type="button" class="btn btn-warning mt-5" data-bs-toggle="modal" data-bs-target="#wine-<%= wine.id %>">More Information</button>
         </div>
         <%= render "shared/modal", wine: wine %>
       </div>
