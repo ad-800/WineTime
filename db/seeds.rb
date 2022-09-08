@@ -1107,7 +1107,7 @@ new_personality.save
 
 parameters = {
   personality_type: 5,
-  description: 'Romanntics are very invested in their ideals and devoted to their passions. They see their pursuit as cut above the rest, and is a cause for concern for others and some a cause for distress. But for the number of times they have been scorned at, the chances of seeing their passion succeed or encountering people with the same sentiments is a joy that is peace amidst the chaos.',
+  description: 'Romantics are very invested in their ideals and devoted to their passions. They see their pursuit as cut above the rest, and is a cause for concern for others and some a cause for distress. But for the number of times they have been scorned at, the chances of seeing their passion succeed or encountering people with the same sentiments is a joy that is peace amidst the chaos.',
   flavor_profile: 'The Romantic',
   wines: [3,9,2]
 }
