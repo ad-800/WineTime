@@ -82,6 +82,6 @@ class ProfilesController < ApplicationController
     end
 
     # get wines by personality type
-    wines
+    wines.sample(8)
   end
 end
