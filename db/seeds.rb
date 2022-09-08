@@ -1697,7 +1697,7 @@ new_wine.save
 # 63
 
 parameters = {
-  name: 'Pomerol “Pom N Roll” 2019 - Chateau Gombaude-Guillot',
+  name: 'Pomerol Pom N Roll 2019 - Chateau Gombaude-Guillot',
   description: 'Ideal with main dishes featuring red meat, main dishes featuring white meats.',
   price: 63.95,
   rating: 87,
