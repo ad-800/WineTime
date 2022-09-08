@@ -16,6 +16,7 @@
                 <div class='show-specs'><%= image_tag "rating.png", class:'show-img' %><p><strong>Rating:</strong> <%= wine.rating %></p></div>
                 <div class='show-specs'><%= image_tag "location.png", class:'show-img' %><p><strong>Country:</strong> <%= wine.country %></p></div>
                 <div class='show-specs'><%= image_tag "region.png", class:'show-img' %><p><strong>Region:</strong> <%= wine.region %></p></div>
+                <div class='show-specs'><%= image_tag "price.png", class:'show-img' %><p><strong>Price:</strong> €<%= sprintf("%0.02f", wine.price) %></p></div>
                 <% if wine.color == 'Red' %>
                   <div class='show-specs'><%= image_tag "color-red.png", class:'show-img' %><p><strong>Color:</strong> <%= wine.color %></p></div>
                 <% elsif wine.color == 'White' %>
@@ -25,7 +26,6 @@
                 <% else %>
                   <div class='show-specs'><%= image_tag "color-champagne.png", class:'show-img' %><p><strong>Color:</strong> <%= wine.color %></p></div>
                 <% end %>
-                <div class='show-specs'><%= image_tag "price.png", class:'show-img' %><p><strong>Price:</strong> €<%= sprintf("%0.02f", wine.price) %></p></div>
               </div>
             </div>
           </div>
