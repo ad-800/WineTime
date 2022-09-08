@@ -9,7 +9,7 @@
         <% else %>
           <div class="box-collection mb-3 p-5" style="background-color: #8D3B72;">
         <% end %>
-          <h4 class="title-shadow"><%= collection.title %> by <%= collection.user.username %></h4>
+          <h4 class="title-shadow"><%= collection.title %> by <%= collection.user.username.titleize %></h4>
         </div>
         <% end %>
       <% end %>
