@@ -1366,9 +1366,498 @@ new_wine = Wine.new(parameters)
 new_wine.photo.attach(io: file, filename: "algherospumante.png", content_type: "png")
 new_wine.save
 
+# 51
+
+parameters = {
+  name: 'Vipavska Dolina Chardonnay ZGP 2018 - Hedele',
+  description: 'Ideal with fish-based main dishes, main dishes featuring white meats, spicy or fragrant dishes.',
+  price: 30.81,
+  rating: 80,
+  country: 'Slovenia',
+  region: 'Vipavska Dolina',
+  color: 'White',
+  wine_type: 'Treating yourself to something special.',
+  bitter: 8,
+  fruit: 6,
+  mineral: 5,
+  spice: 7,
+  earth: 4,
+  wine_unique_id: 51,
+  url: 'https://www.tannico.com/vipavska-dolina-chardonnay-zgp-2018-hedele.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662631272/koljwkmd1uftyimowrks.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "hedele.png", content_type: "png")
+new_wine.save
+
+# 52
+
+parameters = {
+  name: 'Vitovska 2019 - Čotar',
+  description: 'Excelent with fish-based main dishes, fish-based pasta or rice dishes.',
+  price: 37.87,
+  rating: 90,
+  country: 'Slovenia',
+  region: 'Brda',
+  color: 'White',
+  wine_type: 'Dinner with friends.',
+  bitter: 6,
+  fruit: 7,
+  mineral: 8,
+  spice: 5,
+  earth: 3,
+  wine_unique_id: 52,
+  url: 'https://www.tannico.com/vitovska-2019-cotar.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662631686/dmw3ki0sbmd6kdxqfskm.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "cotar.png", content_type: "png")
+new_wine.save
+
+# 53
+
+parameters = {
+  name: 'Vipavska Dolina Rebula ZGP 2010 Magnum - JNK',
+  description: 'Enjoy it with fish-based main dishes, main dishes featuring white meats.',
+  price: 80.53,
+  rating: 91,
+  country: 'Slovenia',
+  region: 'Vipavska Dolina',
+  color: 'White',
+  wine_type: 'Treating yourself to something special.',
+  bitter: 7,
+  fruit: 9,
+  mineral: 5,
+  spice: 7,
+  earth: 6,
+  wine_unique_id: 53,
+  url: 'https://www.tannico.com/vipavska-dolina-rebula-zgp-2010-magnum-jnk.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662632511/vwp1ts0ywd3ae2xrd4jq.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "jnk.png", content_type: "png")
+new_wine.save
+
+#54
+
+parameters = {
+  name: 'Marlborough Chardonnay 2020 - Cloudy Bay',
+  description: 'Excelent wih meat or mushroom-based pasta or rice dishes.',
+  price: 43.03,
+  rating: 90,
+  country: 'New Zeland',
+  region: 'Marlborough',
+  color: 'White',
+  wine_type: 'Dinner with friends.',
+  bitter: 8,
+  fruit: 7,
+  mineral: 4,
+  spice: 2,
+  earth: 4,
+  wine_unique_id: 54,
+  url: 'https://www.tannico.com/marlborough-chardonnay-2020-cloudy-bay.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662632904/oezbxht11k0egnzgvp4q.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "cloudy.png", content_type: "png")
+new_wine.save
+
+# 55
+
+parameters = {
+  name: '"Ergo Sum" 2011 - Domaine Giaconda & Chapoutier',
+  description: 'Ideal with main dishes featuring red meat, poultry.',
+  price: 88.12,
+  rating: 92,
+  country: 'Australia',
+  region: 'Beechworth',
+  color: 'Red',
+  wine_type: 'An evening amongst connoisseurs.',
+  bitter: 8,
+  fruit: 5,
+  mineral: 6,
+  spice: 7,
+  earth: 9,
+  wine_unique_id: 55,
+  url: 'https://www.tannico.com/ergo-sum-2011-domaine-giaconda-chapoutier.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662633275/fghkhws4jwtbevx4i7m5.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "ergosum.png", content_type: "png")
+new_wine.save
+
+#56
+
+parameters = {
+  name: '"700" 2015 - Andes Plateau',
+  description: 'Ideal with main dishes featuring red meat, poultry.',
+  price: 37.53,
+  rating: 92,
+  country: 'Chile',
+  region: 'Valle de Maipo',
+  color: 'Red',
+  wine_type: 'Dinner with friends.',
+  bitter: 7,
+  fruit: 6,
+  mineral: 8,
+  spice: 4,
+  earth: 7,
+  wine_unique_id: 56,
+  url: 'https://www.tannico.com/700-2015-andes-plateau.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662633836/hwwvyglhjrd3pm86gft1.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "cota700.png", content_type: "png")
+new_wine.save
+
+# 57
+
+parameters = {
+  name: 'Mendoza “Alto” 2015 - Alta Vista',
+  description: 'Ideal with main dishes featuring red meat, poultry.',
+  price: 83.80,
+  rating: 96,
+  country: 'Argentina',
+  region: 'Mendoza',
+  color: 'Red',
+  wine_type: 'Après-ski dinners.',
+  bitter: 6,
+  fruit: 5,
+  mineral: 7,
+  spice: 8,
+  earth: 9,
+  wine_unique_id: 57,
+  url: 'https://www.tannico.com/mendoza-alto-2015-alta-vista.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662635948/g7rpp66jbaxje73f2xgf.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "alto.png", content_type: "png")
+new_wine.save
+
+# 58
+
+parameters = {
+  name: 'Kakovostno vino Refošk ZGP “Black Label” 2011 - Klabjan',
+  description: 'Ideal with main dishes featuring red meat, poultry.',
+  price: 49.66,
+  rating: 96,
+  country: 'Slovenia',
+  region: 'Kakovostno Vino',
+  color: 'Red',
+  wine_type: 'An evening amongst connoisseurs.',
+  bitter: 6,
+  fruit: 5,
+  mineral: 7,
+  spice: 8,
+  earth: 9,
+  wine_unique_id: 58,
+  url: 'https://www.tannico.com/kakovostno-vino-refosk-zgp-black-label-2011-klabjan.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662636312/foubvuomfyzfryhh5jeu.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "klare.png", content_type: "png")
+new_wine.save
+
+# 59
+
+parameters = {
+  name: 'Santorini PDO Assyrtiko 2020 - Argyros Estate',
+  description: 'Execelent with aged cheeses, blue-veined cheeses, crustaceans, fish-based main dishes, fish-based pasta or rice dishes, fresh cheeses, main dishes featuring white meats.',
+  price: 43.83,
+  rating: 93,
+  country: 'Greece',
+  region: 'Santorini',
+  color: 'White',
+  wine_type: 'Dinner with friends.',
+  bitter: 7,
+  fruit: 9,
+  mineral: 5,
+  spice: 7,
+  earth: 4,
+  wine_unique_id: 59,
+  url: 'https://www.tannico.com/santorini-pdo-assyrtiko-2020-argyros-estate.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662636671/ye8nycop8gbrxnmvvszu.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "assyrtyko.png", content_type: "png")
+new_wine.save
+
+# 60
+
+parameters = {
+  name: 'Vino Tinto “Peixes da Rocha” 2018 - Peixes',
+  description: 'Enjoy it with main dishes featuring red meat.',
+  price: 34.47,
+  rating: 88,
+  country: 'Spain',
+  region: 'Viana do Bolo',
+  color: 'Red',
+  wine_type: 'Dinner with friends.',
+  bitter: 6,
+  fruit: 3,
+  mineral: 7,
+  spice: 8,
+  earth: 9,
+  wine_unique_id: 60,
+  url: 'https://www.tannico.com/vino-tinto-peixes-da-rocha-2018-peixes.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662637097/dn870h9hoqqnnk0qbij6.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "peixes.png", content_type: "png")
+new_wine.save
+
+#61
+
+parameters = {
+  name: 'Terrazas del Norte Vino Tinto "Ojo de Ibiza" 2016 - Ojo De Agua',
+  description: 'Enjoy it with main dishes featuring red meat.',
+  price: 102.02,
+  rating: 93,
+  country: 'Spain',
+  region: 'Terrazas del Norte',
+  color: 'Red',
+  wine_type: 'Formal dinners.',
+  bitter: 7,
+  fruit: 4,
+  mineral: 9,
+  spice: 3,
+  earth: 6,
+  wine_unique_id: 61,
+  url: 'https://www.tannico.com/ojo-de-ibiza.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662637380/obioqn123lf8s09rhwsc.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "ojo.png", content_type: "png")
+new_wine.save
+
+# 62
+
+parameters = {
+  name: 'Vino Tinto “In Absentia” 2019 - La Senda',
+  description: 'Enjoy it with main dishes featuring red meat.',
+  price: 50.08,
+  rating: 88,
+  country: 'Spain',
+  region: 'La Senda',
+  color: 'Red',
+  wine_type: 'Dinner with friends.',
+  bitter: 8,
+  fruit: 6,
+  mineral: 7,
+  spice: 2,
+  earth: 4,
+  wine_unique_id: 62,
+  url: 'https://www.tannico.com/vino-tinto-in-absentia-2019-la-senda.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662637673/cezgtrf0qjprc2y8cyd6.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "absentia.png", content_type: "png")
+new_wine.save
+
+# 63
+
+parameters = {
+  name: 'Pomerol “Pom N Roll” 2019 - Chateau Gombaude-Guillot',
+  description: 'Ideal with main dishes featuring red meat, main dishes featuring white meats.',
+  price: 63.95,
+  rating: 87,
+  country: 'France',
+  region: 'Bordeaux',
+  color: 'Red',
+  wine_type: 'Dinner with friends.',
+  bitter: 4,
+  fruit: 7,
+  mineral: 8,
+  spice: 4,
+  earth: 7,
+  wine_unique_id: 63,
+  url: 'https://www.tannico.com/pomerol-pom-n-roll-2019-chateau-gombaude-guillot.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662637936/jelylyezmn8ybfpiza9f.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "pomm.png", content_type: "png")
+new_wine.save
+
+# 64
+
+parameters = {
+  name: 'Côteaux du Verdon Rouge IGP “Le Grand Adret” 2017 - Myrko Tépus',
+  description: 'Ideal with main dishes featuring white meats.',
+  price: 50.08,
+  rating: 91,
+  country: 'France',
+  region: 'Provence',
+  color: 'Red',
+  wine_type: 'Dinner with friends.',
+  bitter: 2,
+  fruit: 9,
+  mineral: 4,
+  spice: 6,
+  earth: 6,
+  wine_unique_id: 64,
+  url: 'https://www.tannico.com/coteaux-du-verdon-rouge-igp-la-fin-du-bal-2019-myrko-tepus.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662644438/rkl0gjoujodgzuaevojb.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "andre.png", content_type: "png")
+new_wine.save
+
+# 65
+
+parameters = {
+  name: 'Côtes Du Jura Cuvée "Corail" 2017 - Chateau dArlay',
+  description: 'Ideal with main dishes featuring white meats.',
+  price: 33.86,
+  rating: 81,
+  country: 'France',
+  region: 'Côtes du Jura',
+  color: 'Red',
+  wine_type: 'An evening amongst connoisseurs.',
+  bitter: 6,
+  fruit: 7,
+  mineral: 4,
+  spice: 6,
+  earth: 8,
+  wine_unique_id: 65,
+  url: 'https://www.tannico.com/cotes-du-jura-cuvee-corail-2017-chateau-d-arlay.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662648008/szbvihzju55zzzmv8y3f.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "jura.png", content_type: "png")
+new_wine.save
+
+# 66
+
+parameters = {
+  name: 'Beaujolais-Villages Rouge “Les Tours” 2020 - Domaine Justin Dutraive',
+  description: 'Excelent with meat-based appetizers, meat-based pasta or rice dishes.',
+  price: 39.67,
+  rating: 86,
+  country: 'France',
+  region: 'Beaujolais-Villages',
+  color: 'Red',
+  wine_type: 'Appetizer.',
+  bitter: 4,
+  fruit: 2,
+  mineral: 8,
+  spice: 5,
+  earth: 6,
+  wine_unique_id: 66,
+  url: 'https://www.tannico.com/beaujolais-villages-les-tours-2020-domaine-justin-dutraive.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662648425/xd0nqbhydvu7gg4okgci.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "letour.png", content_type: "png")
+new_wine.save
+
+# 67
+
+parameters = {
+  name: 'Côtes de Provence Rosé "Galoupet Nomade" 2021 - Château Galoupet',
+  description: 'Ideal with dessert, fish-based appetizers, fish-based main dishes, grilled vegetables , meat-based pasta or rice dishes.',
+  price: 30.90,
+  rating: 86,
+  country: 'France',
+  region: 'Côtes de Provence',
+  color: 'Rose',
+  wine_type: 'A springtime outing to the countryside, appetizer, barbecues, special occasions.',
+  bitter: 6,
+  fruit: 9,
+  mineral: 4,
+  spice: 6,
+  earth: 2,
+  wine_unique_id: 67,
+  url: 'https://www.tannico.com/cotes-de-provence-rose-nomade-2021-chateau-galoupet.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662648768/cxoydjl1oibuflmqr0bz.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "nomade.png", content_type: "png")
+new_wine.save
+
+# 68
+
+parameters = {
+  name: 'Côtes de Provence Rosé "Galoupet Nomade" 2021 - Château Galoupet',
+  description: 'Ideal with dessert, fish-based appetizers, fish-based main dishes, grilled vegetables , meat-based pasta or rice dishes.',
+  price: 30.90,
+  rating: 86,
+  country: 'France',
+  region: 'Côtes de Provence',
+  color: 'Rose',
+  wine_type: 'A springtime outing to the countryside, appetizer, barbecues, special occasions.',
+  bitter: 6,
+  fruit: 9,
+  mineral: 4,
+  spice: 6,
+  earth: 2,
+  wine_unique_id: 68,
+  url: 'https://www.tannico.com/cotes-de-provence-rose-nomade-2021-chateau-galoupet.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662648768/cxoydjl1oibuflmqr0bz.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "nomade.png", content_type: "png")
+new_wine.save
+
+
 puts "Finished planting"
 
 puts "Creating Personalities"
+
+
 
 #1
 
