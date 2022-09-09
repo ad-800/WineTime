@@ -1825,33 +1825,6 @@ new_wine = Wine.new(parameters)
 new_wine.photo.attach(io: file, filename: "nomade.png", content_type: "png")
 new_wine.save
 
-# 68
-
-parameters = {
-  name: 'Côtes de Provence Rosé "Galoupet Nomade" 2021 - Château Galoupet',
-  description: 'Ideal with dessert, fish-based appetizers, fish-based main dishes, grilled vegetables , meat-based pasta or rice dishes.',
-  price: 30.90,
-  rating: 86,
-  country: 'France',
-  region: 'Côtes de Provence',
-  color: 'Rose',
-  wine_type: 'A springtime outing to the countryside, appetizer, barbecues, special occasions.',
-  bitter: 6,
-  fruit: 9,
-  mineral: 4,
-  spice: 6,
-  earth: 2,
-  wine_unique_id: 68,
-  url: 'https://www.tannico.com/cotes-de-provence-rose-nomade-2021-chateau-galoupet.html'
-}
-
-puts parameters[:name]
-
-file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662648768/cxoydjl1oibuflmqr0bz.png")
-new_wine = Wine.new(parameters)
-new_wine.photo.attach(io: file, filename: "nomade.png", content_type: "png")
-new_wine.save
-
 # 75
 
 parameters = {
