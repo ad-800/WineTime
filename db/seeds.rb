@@ -1852,11 +1852,306 @@ new_wine = Wine.new(parameters)
 new_wine.photo.attach(io: file, filename: "nomade.png", content_type: "png")
 new_wine.save
 
+# 75
+
+parameters = {
+  name: 'Alto Adige Gewürztraminer DOC "Lafóa" 2020 - Colterenzio',
+  description: 'Ideal with Asian dishes, Crustaceans, Fish-based main dishes.',
+  price: 26.90,
+  rating: 87,
+  country: 'Italy',
+  region: 'Alto Adige',
+  color: 'White',
+  wine_type: 'Dinner with friends.',
+  bitter: 2,
+  fruit: 8,
+  mineral: 4,
+  spice: 8,
+  earth: 6,
+  wine_unique_id: 75,
+  url: 'https://www.tannico.it/en/alto-adige-gewurztraminer-doc-lafoa-2020-colterenzio.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662647820/yqlezprduwyztdyqlpvm.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "wine75.png", content_type: "png")
+new_wine.save
+
+# 76
+
+parameters = {
+  name: 'Sonoma County "Le Désir" Magnum 2017 - Vérité',
+  description: 'Bound by precision, elegance and grace, Le Désir is a Cabernet Franc-based blend that exudes high-toned, exotic aromatics, an iron graphite core and pronounced minerality.',
+  price: 867.00,
+  rating: 98,
+  country: 'USA',
+  region: 'Sonoma County',
+  color: 'Red',
+  wine_type: 'Prestigious Bottle.',
+  bitter: 4,
+  fruit: 8,
+  mineral: 9,
+  spice: 9,
+  earth: 9,
+  wine_unique_id: 76,
+  url: 'https://www.tannico.it/en/sonoma-county-le-desir-magnum-2017-verite.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662648693/sza632fnb70se0gcsjko.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "wine76.png", content_type: "png")
+new_wine.save
+
+# 77
+
+parameters = {
+  name: 'Napa Valley "Ulysses" 2017 - Ulysses Vineyard',
+  description: 'Ideal with Main dishes featuring red meat.',
+  price: 197.00,
+  rating: 95,
+  country: 'USA',
+  region: 'Napa Valley',
+  color: 'Red',
+  wine_type: 'An evening amongst connoisseurs.',
+  bitter: 6,
+  fruit: 8,
+  mineral: 7,
+  spice: 3,
+  earth: 4,
+  wine_unique_id: 77,
+  url: 'https://www.tannico.it/en/napa-valley-ulysses-2017-ulysses-vineyard.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662649052/bnfqr6no1dgud86ujbqk.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "wine77.png", content_type: "png")
+new_wine.save
+
+# 78
+
+parameters = {
+  name: 'Napa Valley Red Blend "The Prisoner" 2019 - The Prisoner Wine Company',
+  description: 'Ideal with Main dishes featuring red meat',
+  price: 62.50,
+  rating: 83,
+  country: 'USA',
+  region: 'Napa Valley',
+  color: 'Red',
+  wine_type: 'Formal dinners.',
+  bitter: 9,
+  fruit: 2,
+  mineral: 9,
+  spice: 3,
+  earth: 5,
+  wine_unique_id: 78,
+  url: 'https://www.tannico.it/en/catalog/product/view/id/113805/s/napa-valley-red-blend-the-prisoner-2019-the-prisoner-wine-company/'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662649355/lbkalrb7hzqetclo607m.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "wine78.png", content_type: "png")
+new_wine.save
+
+# 79
+
+parameters = {
+  name: 'Napa Valley "Rubicon" 2015 - Inglenook',
+  description: 'Ideal with Main dishes featuring red meat',
+  price: 195.00,
+  rating: 88,
+  country: 'USA',
+  region: 'Napa Valley',
+  color: 'Red',
+  wine_type: 'Prestigious bottles.',
+  bitter: 7,
+  fruit: 6,
+  mineral: 4,
+  spice: 2,
+  earth: 9,
+  wine_unique_id: 79,
+  url: 'https://www.tannico.it/en/napa-valley-rubicon-2015-inglenook.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662672165/rq8dkhadoyfzoej3hkim.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "wine79.png", content_type: "png")
+new_wine.save
+
+# 80
+
+parameters = {
+  name: "Tavel 2021 - Château d'Aqueria",
+  description: 'Ideal with Main dishes featuring red meat',
+  price: 17.80,
+  rating: 89,
+  country: 'France',
+  region: 'Rhône',
+  color: 'Rosé',
+  wine_type: 'Romantic evenings.',
+  bitter: 1,
+  fruit: 9,
+  mineral: 2,
+  spice: 7,
+  earth: 8,
+  wine_unique_id: 80,
+  url: 'https://www.tannico.it/en/tavel-2021-chateau-d-aqueria.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662672904/zsez6nrlhpxmcm6ij8z7.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "win80.png", content_type: "png")
+new_wine.save
+
+# 81
+
+parameters = {
+  name: "Swartland WO “Elpidios” 2017 - David & Nadia",
+  description: 'Ideal with Game, Main dishes featuring red meat, Meat-based pasta or rice dishes',
+  price: 40.00,
+  rating: 89,
+  country: 'South Africa',
+  region: 'Swartland',
+  color: 'Red',
+  wine_type: 'Lunch with family.',
+  bitter: 7,
+  fruit: 4,
+  mineral: 9,
+  spice: 9,
+  earth: 4,
+  wine_unique_id: 81,
+  url: 'https://www.tannico.it/en/swartland-wo-elpidios-2017-david-nadia.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662672941/ys7rcxcezfhjlv6ygebf.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "win81.png", content_type: "png")
+new_wine.save
+
+# 82
+
+parameters = {
+  name: "Méditerranée Rosé IGP Insolence 2021 - Estandon",
+  description: 'Ideal with fish-based main dishes, Main dishes featuring white meats',
+  price: 8.90,
+  rating: 84,
+  country: 'France',
+  region: 'Méditerranée',
+  color: 'Rosé',
+  wine_type: 'Appetizer.',
+  bitter: 1,
+  fruit: 9,
+  mineral: 4,
+  spice: 8,
+  earth: 6,
+  wine_unique_id: 82,
+  url: 'https://www.tannico.it/en/mediterranee-rose-igp-insolence-2021-estandon.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662673254/pc5elfcklzt77zbwi2uo.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "wine82-.png", content_type: "png")
+new_wine.save
+
+# 83
+
+parameters = {
+  name: "Prosecco DOC Extra Dry 'Sandro' - V8+ Vineyards",
+  description: 'Ideal with Fish-based appetizers, Fish-based pasta or rice dishes',
+  price: 9.50,
+  rating: 80,
+  country: 'Italy',
+  region: 'Veneto',
+  color: 'Champagne and Sparkling',
+  wine_type: 'Appetizer.',
+  bitter: 9,
+  fruit: 4,
+  mineral: 8,
+  spice: 4,
+  earth: 8,
+  wine_unique_id: 83,
+  url: 'https://www.tannico.it/en/prosecco-doc-extra-dry-sandro-v8-vineyards.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662673607/giqg5qkdrhtzsdwq6c5s.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "wine83.png", content_type: "png")
+new_wine.save
+
+# 84
+
+parameters = {
+  name: "Umbria Rosso IGT “Battito” 2019 - Decugnano dei Barbi",
+  description: 'Ideal with Main dishes featuring red meat, Main dishes featuring white meats, Meat-based pasta or rice dishes',
+  price: 13.90,
+  rating: 90,
+  country: 'Italy',
+  region: 'Orvieto',
+  color: 'Red',
+  wine_type: ' Dinner with friends.',
+  bitter: 5,
+  fruit: 5,
+  mineral: 5,
+  spice: 5,
+  earth: 5,
+  wine_unique_id: 84,
+  url: 'https://www.tannico.it/en/umbria-rosso-igt-battito-2019-decugnano-dei-barbi.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662673940/bpllaz4kuvbhw26n7fsr.png")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "wine84.png", content_type: "png")
+new_wine.save
+
+# 85
+
+parameters = {
+  name: "Franciacorta DOCG Satèn 2018 - Ferghettina",
+  description: 'Ideal with Fish-based appetizers, Fish-based pasta or rice dishes',
+  price: 27.00,
+  rating: 93,
+  country: 'Italy',
+  region: 'Lombardy',
+  color: 'Champagne and Sparkling',
+  wine_type: ' Romantic evenings.',
+  bitter: 2,
+  fruit: 9,
+  mineral: 8,
+  spice: 8,
+  earth: 3,
+  wine_unique_id: 85,
+  url: 'https://www.tannico.it/en/umbria-rosso-igt-battito-2019-decugnano-dei-barbi.html'
+}
+
+puts parameters[:name]
+
+file = URI.open("http://res.cloudinary.com/dlvzuwyxv/image/upload/v1662674158/x4jgyliwiup5nycfffxy.jpg")
+new_wine = Wine.new(parameters)
+new_wine.photo.attach(io: file, filename: "wine85.png", content_type: "png")
+new_wine.save
 
 puts "Finished planting"
 
 puts "Creating Personalities"
-
 
 
 #1
